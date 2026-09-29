@@ -1,235 +1,357 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import { AnimatePresence, motion } from "motion/react";
+import { ArrowRight, Menu, X } from "lucide-react";
 
 const links = [
-  { nombre: "Inicio", ruta: "/#Hero"  },
+  { nombre: "Inicio", ruta: "/#Hero" },
   { nombre: "Servicios", ruta: "/servicios#Servicios" },
   { nombre: "Proyectos", ruta: "/proyectos#Proyectos" },
-  // { nombre: "Nosotros", ruta: "/nosotros#" },
+  { nombre: "Nosotros", ruta: "/nosotros#Nosotros" },
   { nombre: "Contacto", ruta: "/contacto#Contacto" },
-
 ];
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header
-      className="
-        w-8/12
-        m-auto
-        sticky top-5
-         z-50
-        bg-blue-950/10         
-        rounded-3xl
-        backdrop-blur-xl
-      "
-    >
-      <nav
-        className="
-          mx-auto
-          flex h-15
-          max-w-7xl
-          items-center
-          justify-between
-          px-5
-          md:px-8
-          lg:px-10
-        "
-      >
-        {/* LOGO */}
-
-        <NavLink
-          to="/"
+    <header className="sticky top-4 z-50 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl">
+        <nav
           className="
-            font-display
-            text-xl
-            font-bold
-            tracking-tight
-            text-gray-950
+            relative
+            rounded-3xl
+            border border-[#26344A]
+             bg-[#101A2B]/60
+            shadow-2xl
+            shadow-black/20
+            backdrop-blur-2xl
           "
         >
-          <img src="/KoiBite-log.svg" alt=""  className="size-8"/>
-        </NavLink>
-
-        {/* LINKS DESKTOP */}
-
-        <div className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <NavLink
-              key={link.ruta}
-              to={link.ruta}
-              end={link.ruta === "/"}
-              className={({ isActive }) =>
-                `
-                  relative
-                  py-2
-                  text-sm
-                  font-medium
-                  transition-colors
-                  duration-200
-                  ${
-                    isActive
-                      ? "text-white"
-                      : "text-gray-500 hover:text-white"
-                  }
-                `
-              }
-            >
-              {({ isActive }) => (
-                <>
-                  {link.nombre}
-
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-indicator"
-                      className="
-                        absolute
-                        -bottom-1
-                        left-0
-                        h-[2px]
-                        w-full
-                        rounded-full
-                        bg-blue-600
-                      "
-                    />
-                  )}
-                </>
-              )}
-            </NavLink>
-          ))}
-        </div>
-
-        {/* CTA DESKTOP */}
-
-        <div className="hidden md:block">
-          <NavLink
-            to="/contacto"
+          <div
             className="
-              inline-flex
+              flex
+              h-[68px]
               items-center
-              justify-center
-              rounded-xl
-              bg-orange-600
-              px-5
-              py-2.5
-              text-sm
-              font-semibold
-              text-white
-              transition
-              duration-300
-              hover:bg-orange-700
+              justify-between
+              px-4
+              sm:px-6
+              lg:px-7
             "
           >
-            Hablemos
-          </NavLink>
-        </div>
+            {/* =====================================================
+                LOGO
+            ===================================================== */}
+            <NavLink
+              to="/"
+              className="group flex items-center gap-3"
+              aria-label="Ir al inicio"
+            >
+              <div
+                className="
+                  relative
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  overflow-hidden
+                  rounded-xl
+                  
+                  
+                  transition
+                  duration-300
+                  group-hover:border-[#FA713A]/40
+                  group-hover:bg-[#162338]
+                "
+              >
+                <div
+                  aria-hidden="true"
+                  className="
+                    absolute
+                    inset-0
+                    bg-[#FA713A]/5
+                    opacity-0
+                    transition
+                    duration-300
+                    group-hover:opacity-100
+                  "
+                />
 
-        {/* MOBILE */}
+                <img
+                  src="/KoiBite-log.svg"
+                  alt=""
+                  className="relative size-7 transition duration-300 group-hover:scale-105"
+                />
+              </div>
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="
-            flex h-10 w-10
-            flex-col
-            items-center
-            justify-center
-            gap-1.5
-            rounded-lg
-            
-            md:hidden
-          "
-          aria-label="Abrir menú"
-        >
-          <span
-            className={`
-              h-[2px] w-5 bg-white
-              transition
-              ${menuOpen ? "translate-y-2 rotate-45" : ""}
-            `}
-          />
+              <span className="hidden text-sm font-semibold tracking-tight text-white sm:block">
+                KoiBite
+              </span>
+            </NavLink>
 
-          <span
-            className={`
-              h-[2px] w-5 bg-white
-              transition
-              ${menuOpen ? "opacity-0" : ""}
-            `}
-          />
-
-          <span
-            className={`
-              h-[2px] w-5 bg-white
-              transition
-              ${menuOpen ? "-translate-y-2 -rotate-45" : ""}
-            `}
-          />
-        </button>
-      </nav>
-
-      {/* MENU MOBILE */}
-
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25 }}
-            className="overflow-hidden  md:hidden"
-          >
-            <div className="px-5 py-6">
-              <div className="flex flex-col gap-1">
+            {/* =====================================================
+                LINKS DESKTOP
+            ===================================================== */}
+            <div className="hidden items-center md:flex">
+              <div className="flex items-center gap-1 rounded-xl p-1">
                 {links.map((link) => (
                   <NavLink
                     key={link.ruta}
                     to={link.ruta}
-                    end={link.ruta === "/"}
-                    onClick={() => setMenuOpen(false)}
+                    end={link.ruta === "/#Hero"}
                     className={({ isActive }) =>
                       `
-                        rounded-xl
-                        px-4 py-3
-                        text-base
+                        relative
+                        rounded-lg
+                        px-4
+                        py-2.5
+                        text-sm
                         font-medium
                         transition
+                        duration-300
                         ${
                           isActive
-                            ? "bg-white/10 text-white"
-                            : "text-gray-400 hover:bg-gray-50 hover:text-gray-950"
+                            ? "bg-[#FA713A]/10 text-white"
+                            : "text-slate-400 hover:bg-white/5 hover:text-white"
                         }
                       `
                     }
                   >
-                    {link.nombre}
+                    {({ isActive }) => (
+                      <span className="relative z-10 flex items-center gap-2">
+                        {isActive && (
+                          <motion.span
+                            layoutId="nav-active-dot"
+                            className="h-1.5 w-1.5 rounded-full bg-[#FA713A]"
+                            transition={{
+                              type: "spring",
+                              stiffness: 500,
+                              damping: 30,
+                            }}
+                          />
+                        )}
+
+                        {link.nombre}
+                      </span>
+                    )}
                   </NavLink>
                 ))}
               </div>
+            </div>
 
-              <NavLink
-                to="/contacto"
-                onClick={() => setMenuOpen(false)}
-                className="
-                  mt-5
-                  flex w-full
+            {/* =====================================================
+                CTA DESKTOP
+            ===================================================== */}
+            <a className="
+                  group
+                  inline-flex
                   items-center
-                  justify-center
+                  gap-2
                   rounded-xl
-                  bg-orange-500
-                  px-6
-                  py-3
+                  border
+                  border-[#FA713A]/20
+                  bg-[#FA713A]
+                  px-5
+                  py-2.5
                   text-sm
                   font-semibold
                   text-white
-                "
+                  shadow-lg
+                  shadow-black/20
+                  transition
+                  duration-300
+                  hover:-translate-y-0.5
+                  hover:bg-[#E85F2D]
+                  hover:shadow-[#FA713A]/20
+                  focus-visible:outline-none
+                  focus-visible:ring-2
+                  focus-visible:ring-[#FA713A]
+                  focus-visible:ring-offset-2
+                  focus-visible:ring-offset-[#080F1E]
+                " href={`https://wa.me/${2604230590}?text=${encodeURIComponent(
+                    "¡Hola! Me gustaría consultar por un proyecto.",
+                  )}`}
+                >
+        
+                
+              
+                
+                  
+                  Hablemos
+                
+                <ArrowRight
+                  size={16}
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"></ArrowRight>
+                
+            </a>
+
+            {/* =====================================================
+                MOBILE BUTTON
+            ===================================================== */}
+            <button
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-xl
+                
+                bg-[#101A2B]
+                text-slate-300
+                transition
+                duration-300
+                hover:border-[#FA713A]/40
+                hover:bg-[#162338]
+                hover:text-white
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-[#FA713A]
+                md:hidden
+              "
+              aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-expanded={menuOpen}
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                {menuOpen ? (
+                  <motion.span
+                    key="close"
+                    initial={{ opacity: 0, rotate: -90 }}
+                    animate={{ opacity: 1, rotate: 0 }}
+                    exit={{ opacity: 0, rotate: 90 }}
+                    transition={{ duration: 0.18 }}
+                  >
+                    <X size={21} />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="menu"
+                    initial={{ opacity: 0, rotate: 90 }}
+                    animate={{ opacity: 1, rotate: 0 }}
+                    exit={{ opacity: 0, rotate: -90 }}
+                    transition={{ duration: 0.18 }}
+                  >
+                    <Menu size={21} />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
+
+          {/* =====================================================
+              MENU MOBILE
+          ===================================================== */}
+          <AnimatePresence initial={false}>
+            {menuOpen && (
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  height: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  height: "auto",
+                }}
+                exit={{
+                  opacity: 0,
+                  height: 0,
+                }}
+                transition={{
+                  duration: 0.25,
+                  ease: "easeOut",
+                }}
+                className="overflow-hidden md:hidden"
               >
-                Solicitar Presupuesto
-              </NavLink>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <div className="border-t border-[#26344A] px-4 pb-5 pt-3">
+                  <div className="flex flex-col gap-1">
+                    {links.map((link) => (
+                      <NavLink
+                        key={link.ruta}
+                        to={link.ruta}
+                        end={link.ruta === "/#Hero"}
+                        onClick={() => setMenuOpen(false)}
+                        className={({ isActive }) =>
+                          `
+                            flex
+                            items-center
+                            gap-3
+                            rounded-xl
+                            px-4
+                            py-3.5
+                            text-sm
+                            font-medium
+                            transition
+                            duration-300
+                            ${
+                              isActive
+                                ? "border border-[#FA713A]/20 bg-[#FA713A]/10 text-white"
+                                : "border border-transparent text-slate-400 hover:bg-white/5 hover:text-white"
+                            }
+                          `
+                        }
+                      >
+                        {({ isActive }) => (
+                          <>
+                            <span
+                              className={`
+                                h-1.5
+                                w-1.5
+                                rounded-full
+                                transition
+                                ${isActive ? "bg-[#FA713A]" : "bg-slate-700"}
+                              `}
+                            />
+
+                            {link.nombre}
+                          </>
+                        )}
+                      </NavLink>
+                    ))}
+                  </div>
+
+                  {/* CTA MOBILE */}
+                  <NavLink
+                    to="/contacto"
+                    onClick={() => setMenuOpen(false)}
+                    className="
+                      group
+                      mt-4
+                      flex
+                      w-full
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-xl
+                      bg-[#FA713A]
+                      px-6
+                      py-3.5
+                      text-sm
+                      font-semibold
+                      text-white
+                      shadow-lg
+                      shadow-black/20
+                      transition
+                      duration-300
+                      hover:bg-[#E85F2D]
+                    "
+                  >
+                    Hablemos de tu proyecto
+                    <ArrowRight
+                      size={17}
+                      aria-hidden="true"
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </NavLink>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </nav>
+      </div>
     </header>
   );
 };

@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import Servicies from './pages/Servicies'
 import { About } from './pages/AboutUs'
 import Contact from './pages/Contact'
-import { Proceso } from './pages/Proceso'
+import  Nosotros from './pages/Nosotros'
 import Proyectos from './pages/Proyectos'
 
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/servicios"  element={<Servicies></Servicies>}></Route>
         <Route path="/proyectos"  element={<Proyectos></Proyectos>}></Route>
-        <Route path="/proceso"  element={<Proceso></Proceso>}></Route>
+        <Route path="/nosotros"  element={<Nosotros></Nosotros>}></Route>
         <Route path="/nosotros"  element={<About></About>}></Route>
         <Route path="/contacto"  element={<Contact></Contact>}></Route>
       </Route>
