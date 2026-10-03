@@ -173,9 +173,6 @@ export const Navbar = () => {
                     "¡Hola! Me gustaría consultar por un proyecto.",
                   )}`}
                 >
-        
-                
-              
                 
                   
                   Hablemos
