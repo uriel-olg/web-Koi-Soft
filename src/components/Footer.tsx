@@ -342,7 +342,7 @@ export default function Footer() {
           "
         >
           <p>
-            © {new Date().getFullYear()} HZ Soft. Todos los derechos reservados.
+            © {new Date().getFullYear()} KoiBite. Todos los derechos reservados.
           </p>
 
           <div className="flex gap-6">
