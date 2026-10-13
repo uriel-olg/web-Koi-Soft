@@ -5,10 +5,12 @@ import Footer from "../components/Footer";
 export const MainLayaout = () => {
   return (
     <>
-      <div className="bg-[#080F1E]">
+      <div className="min-h-screen bg-[#080F1E]">
         <Navbar></Navbar>
 
-        <main >
+        <main className="flex-1 ">
+
+
           <Outlet></Outlet>
         </main>
 

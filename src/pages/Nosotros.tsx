@@ -95,7 +95,7 @@ export default function Nosotros() {
           className="absolute -left-32 top-72 h-80 w-80 rounded-full bg-[#FA713A]/5 blur-3xl"
         />
 
-        <div className={`${container} relative py-20 sm:py-24 lg:py-32`}>
+        <div className={`${container} relative py-20 sm:py-24 lg:py-32 mt-10`}>
           <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20">
             {/* TEXTO */}
             <div>
