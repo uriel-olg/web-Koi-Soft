@@ -238,7 +238,7 @@ export default function Footer() {
           ===================================================== */}
 
           <div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="hidden md:grid md:gap-8  lg:grid-cols-2 ">
               {/* DIGITAL */}
               <div>
                 <div className="flex items-center gap-2">

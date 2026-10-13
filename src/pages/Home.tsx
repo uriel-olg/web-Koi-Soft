@@ -1240,7 +1240,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROJECTS */}
+      {/* PROJECTS
       <section id="proyectos" className="bg-[#080F1E] py-20 md:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <motion.div
@@ -1401,7 +1401,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* PROCESS */}
       <section
@@ -1423,7 +1423,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="relative mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="relative mt-14 grid gap-10 grid-cols-2 lg:grid-cols-4">
             <div
               aria-hidden="true"
               className="absolute left-0 right-0 top-[7px] hidden h-px bg-linear-to-r from-[#FA713A]/40 via-[#304059] to-[#304059] lg:block"

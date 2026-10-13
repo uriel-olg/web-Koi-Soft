@@ -1268,7 +1268,7 @@ export default function Proyectos() {
             </p>
           </motion.div>
 
-          <div className="relative mt-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div className="relative mt-14 grid gap-10 grid-cols-2 lg:grid-cols-4">
             <div
               aria-hidden="true"
               className="absolute left-0 right-0 top-5 hidden h-px bg-linear-to-r from-[#FA713A]/40 via-[#304059] to-[#304059] lg:block"
