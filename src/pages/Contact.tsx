@@ -244,7 +244,7 @@ export default function Contacto({
   return (
     <main
       id="Contacto"
-      className="min-h-screen overflow-hidden bg-[#080F1E] text-white selection:bg-[#FA713A]/30 [&_section[id]]:scroll-mt-28"
+      className="min-h-screen overflow-hidden  text-white selection:bg-[#FA713A]/30 [&_section[id]]:scroll-mt-28"
     >
       {/* =========================================================
           HERO
@@ -285,7 +285,7 @@ export default function Contacto({
               <span className="mt-1 block text-[#FA713A]">resolver.</span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-sm leading-8 text-[#A1AEC3] sm:text-base">
+            <p className="mt-7 max-w-xl text-sm leading-8 text-gray-300 sm:text-base">
               Una nueva web, un equipo que necesita atención o simplemente una
               idea que todavía no sabés cómo encarar. Empecemos por entender el
               problema.
@@ -967,7 +967,7 @@ export default function Contacto({
       {/* =========================================================
           PRÓXIMOS PASOS
       ========================================================= */}
-      <section className="border-y border-[#26344A] bg-[#071024] text-white">
+      <section className="border-y border-[#26344A]  text-white">
         <div className={`${container} py-16 lg:py-20`}>
           <motion.div {...fadeUp} className="max-w-2xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFB297]">

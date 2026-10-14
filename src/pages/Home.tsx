@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowRight,
-  ArrowUpRight,
+
   Check,
   Code2,
   Cpu,
@@ -213,17 +213,20 @@ export default function Home() {
   return (
     <main
       id="Hero"
-      className="overflow-hidden bg-[#080F1E] font-sans text-[#F3F5FA] selection:bg-[#FA713A]/30 [&_a]:focus-visible:outline-2 [&_a]:focus-visible:outline-offset-4 [&_a]:focus-visible:outline-[#FFB297]"
+      className="overflow-hidden font-sans  text-[#F3F5FA] selection:bg-[#FA713A]/30 [&_a]:focus-visible:outline-2 [&_a]:focus-visible:outline-offset-4 [&_a]:focus-visible:outline-[#FFB297]"
     >
       {/* HERO */}
-      <section className="relative overflow-hidden">
+      <section className=" relative overflow-hidden"
+      
+      >
+        
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-[0.035] [background-image:linear-gradient(rgba(255,255,255,.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.6)_1px,transparent_1px)] [background-size:52px_52px]"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-40 top-40 h-[520px] w-[520px] rounded-full bg-[#28314B]/30 blur-3xl"
+          className="pointer-events-none absolute -right-40 top-40 h-[520px] w-[520px] rounded-full blur-3xl"
         />
         <div
           aria-hidden="true"
@@ -235,7 +238,7 @@ export default function Home() {
             initial={reduceMotion ? false : { opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: reduceMotion ? 0 : 0.5 }}
-            className="relative z-10"
+            className="relative z-10 "
           >
             <div className="mb-7 flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#FFB297] sm:text-xs">
               <span className="h-px w-7 shrink-0 bg-[#FA713A]" />
@@ -249,7 +252,7 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="mt-7 max-w-xl text-sm leading-8 text-[#A1AEC3] sm:text-base">
+            <p className="mt-7 max-w-xl text-sm leading-8 text-gray-300 sm:text-base">
               Creamos sitios web profesionales y nos ocupamos de los equipos,
               sistemas y soporte tecnológico que necesitás para trabajar sin
               complicaciones.
@@ -270,7 +273,7 @@ export default function Home() {
 
               <Link
                 to="/servicios"
-                className="inline-flex items-center justify-center rounded-xl border border-[#344159] bg-white/[0.02] px-6 py-4 text-sm font-medium text-[#E2E8F0] transition-colors hover:border-[#FA713A]/60 hover:bg-white/5"
+                className="inline-flex items-center justify-center rounded-xl border border-[#FA713A] bg-white/[0.02] px-6 py-4 text-sm font-medium text-[#E2E8F0] transition-colors  hover:bg-white/5"
               >
                 Ver servicios
               </Link>
@@ -1025,7 +1028,7 @@ export default function Home() {
       </section>
 
       {/* TRUST STRIP */}
-      <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl mt-20 px-5 md:px-8 lg:px-12">
         <div className="flex flex-wrap justify-between gap-5 border-y border-[#233149] py-6 text-[10px] uppercase tracking-[0.16em] text-[#BAC7D8] sm:text-xs">
           <span className="flex items-center gap-3">
             <Code2 size={16} aria-hidden="true" className="text-[#FA713A]" />
@@ -1053,7 +1056,7 @@ export default function Home() {
       {/* SERVICES */}
       <section
         id="servicios"
-        className="bg-[#080F1E] py-20 text-white md:py-24 lg:py-28"
+        className=" py-20 text-white md:py-24 lg:py-28"
       >
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <motion.div
@@ -1164,7 +1167,7 @@ export default function Home() {
 
       {/* BENEFITS */}
       <section id="beneficios" className="px-5 py-4 md:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1184px] overflow-hidden rounded-3xl bg-[#E9E7E1] text-[#152136]">
+        <div className="mx-auto max-w-[1184px] overflow-hidden rounded-3xl bg-[#e9e7e1] text-[#152136]">
           <div className="grid lg:grid-cols-[.8fr_1.2fr]">
             <motion.div
               {...fadeUp}
@@ -1406,7 +1409,7 @@ export default function Home() {
       {/* PROCESS */}
       <section
         id="proceso"
-        className="relative bg-[#080F1E] py-20 md:py-24 lg:py-28"
+        className="relative  py-20 md:py-24 lg:py-28"
       >
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <motion.div {...fadeUp} className="max-w-2xl">
@@ -1424,11 +1427,7 @@ export default function Home() {
           </motion.div>
 
           <div className="relative mt-14 grid gap-10 grid-cols-2 lg:grid-cols-4">
-            <div
-              aria-hidden="true"
-              className="absolute left-0 right-0 top-[7px] hidden h-px bg-linear-to-r from-[#FA713A]/40 via-[#304059] to-[#304059] lg:block"
-            />
-
+            
             {process.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -1439,9 +1438,9 @@ export default function Home() {
                   duration: reduceMotion ? 0 : 0.5,
                   delay: reduceMotion ? 0 : index * 0.08,
                 }}
-                className="relative border-t border-[#304059] pt-6 text-left lg:border-t-0"
+                className="relative border-t border-[#304059] items-center pt-6 text-center lg:border-t-0"
               >
-                <span className="relative z-10 inline-flex h-4 w-4 rounded-full border-4 border-[#080F1E] bg-[#FA713A] lg:-mt-8 lg:mb-4" />
+                
 
                 <span className="block font-mono text-sm text-[#FA713A]">
                   {step.number.padStart(2, "0")}
@@ -1461,13 +1460,13 @@ export default function Home() {
       {/* CAPABILITIES / TECHNOLOGIES */}
       <section
         id="tecnologias"
-        className="border-y border-[#233149] bg-[#0A1221] py-12"
+        className="  py-12"
       >
         <div className="mx-auto grid max-w-7xl gap-9 px-5 md:px-8 lg:grid-cols-2 lg:px-12">
           <div>
             <div className="flex items-center gap-3">
-              <Code2 size={16} aria-hidden="true" className="text-[#7DB3FF]" />
-              <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#A1AEC3]">
+              <Code2 size={20} aria-hidden="true" className="text-[#2f85fe]" />
+              <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#cfd5e0]">
                 Stack digital
               </p>
             </div>
@@ -1476,7 +1475,7 @@ export default function Home() {
               {digitalTechnologies.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-full border border-[#263851] bg-[#101A2B] px-3 py-2 text-xs font-medium text-[#B8C4D5]"
+                  className="rounded-full border border-[#5780b9] bg-[#00225d82] px-3 py-2 text-xs font-medium text-gray-200"
                 >
                   {tech}
                 </span>
@@ -1487,11 +1486,11 @@ export default function Home() {
           <div className="border-t border-[#233149] pt-8 lg:border-l lg:border-t-0 lg:pl-9 lg:pt-0">
             <div className="flex items-center gap-3">
               <MonitorCog
-                size={16}
+                size={20}
                 aria-hidden="true"
                 className="text-[#FA713A]"
               />
-              <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#A1AEC3]">
+              <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#ffffff]">
                 Capacidades IT
               </p>
             </div>
@@ -1500,7 +1499,7 @@ export default function Home() {
               {itCapabilities.map((item) => (
                 <span
                   key={item}
-                  className="rounded-full border border-[#403039] bg-[#151722] px-3 py-2 text-xs font-medium text-[#C6BBC0]"
+                  className="rounded-full border border-[#a53001] bg-[#6b1e0095] px-3 py-2 text-xs font-medium text-gray-200"
                 >
                   {item}
                 </span>

@@ -208,7 +208,7 @@ export default function Servicies() {
   return (
     <main
       id="Servicios"
-      className="overflow-hidden bg-[#080F1E] font-sans text-[#F3F5FA] selection:bg-[#FA713A]/30 [&_a]:focus-visible:outline-2 [&_a]:focus-visible:outline-offset-4 [&_a]:focus-visible:outline-[#FFB297] [&_section[id]]:scroll-mt-28"
+      className="overflow-hidden  font-sans text-[#F3F5FA] selection:bg-[#FA713A]/30 [&_a]:focus-visible:outline-2 [&_a]:focus-visible:outline-offset-4 [&_a]:focus-visible:outline-[#FFB297] [&_section[id]]:scroll-mt-28"
     >
       {/* HERO */}
       <section className="relative overflow-hidden">
@@ -423,7 +423,7 @@ export default function Servicies() {
       {/* SERVICES */}
       <section
         id="servicios"
-        className="bg-[#080F1E] py-20 text-white md:py-24 lg:py-28"
+        className=" py-20 text-white md:py-24 lg:py-28"
       >
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <motion.div
@@ -742,7 +742,7 @@ export default function Servicies() {
 
             <motion.div
               {...fadeUp}
-              className="relative min-h-[420px] overflow-hidden bg-[#101A2B] p-6 sm:p-8"
+              className="relative min-h-[420px] overflow-hidden  p-6 sm:p-8"
             >
               <div
                 aria-hidden="true"
@@ -839,7 +839,7 @@ export default function Servicies() {
       </section>
 
       {/* PROCESS */}
-      <section id="proceso" className="bg-[#080F1E] py-20 md:py-24 lg:py-28">
+      <section id="proceso" className=" py-20 md:py-24 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <motion.div {...fadeUp} className="max-w-2xl">
             <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFB297]">
@@ -857,6 +857,10 @@ export default function Servicies() {
           <div className="relative mt-14 grid gap-10 grid-cols-2 lg:grid-cols-4">
             
 
+            <div
+              aria-hidden="true"
+              className="absolute w-9/12 m-auto left-0 right-0 top-1 hidden h-px bg-linear-to-r from-[#FA713A]/40 via-[#304059] to-[#304059] lg:block"
+            />
             {process.map((step, index) => {
               const Icon = step.icon;
 
@@ -870,7 +874,7 @@ export default function Servicies() {
                     duration: reduceMotion ? 0 : 0.5,
                     delay: reduceMotion ? 0 : index * 0.08,
                   }}
-                  className="relative flex flex-col items-start border-t border-[#304059] pt-6 lg:border-t-0"
+                  className="relative flex flex-col items-center text-center border-t border-[#304059] pt-6 lg:border-t-0"
                 >
                   <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-xl border border-[#FA713A]/15 bg-[#101A2B] text-[#FA713A] lg:-mt-10">
                     <Icon aria-hidden="true" size={18} />
@@ -881,7 +885,7 @@ export default function Servicies() {
                   <h3 className="mt-2 text-lg font-semibold text-white">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-left text-sm leading-6 text-[#A1AEC3]">
+                  <p className="mt-3 text-sm leading-6 text-[#A1AEC3]">
                     {step.description}
                   </p>
                 </motion.div>
@@ -892,7 +896,7 @@ export default function Servicies() {
       </section>
 
       {/* AUDIENCE */}
-      <section id="para-quien" className="bg-[#080F1E] py-20 md:py-28">
+      <section id="para-quien" className=" py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-12">
           <div className="grid gap-12 lg:grid-cols-[.7fr_1.3fr] lg:items-end">
             <motion.div {...fadeUp}>
@@ -987,7 +991,7 @@ export default function Servicies() {
 
       <section
         id="preguntas-frecuentes"
-        className="bg-[#080F1E] py-20 md:py-24 lg:py-28"
+        className=" py-20 md:py-24 lg:py-28"
       >
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:px-8 lg:grid-cols-[.75fr_1.25fr] lg:gap-20 lg:px-12">
           <motion.div {...fadeUp}>

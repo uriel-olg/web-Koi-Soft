@@ -1,21 +1,35 @@
-import { Navbar } from "../components/NavBar";
 import { Outlet } from "react-router";
+import { Navbar } from "../components/NavBar";
 import Footer from "../components/Footer";
 
 export const MainLayaout = () => {
   return (
-    <>
-      <div className="min-h-screen bg-[#080F1E]">
-        <Navbar></Navbar>
+    <div className="relative min-h-screen text-white">
+      {/* BACKGROUND GLOBAL */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-0"
+      >
+        <img
+          src="/fondo.webp"
+          alt=""
+          className="h-full w-full  object-cover object-left md:object-center"
+        />
 
-        <main className="flex-1 ">
+        {/* Oscurece un poco para mantener legibilidad */}
+        <div className="absolute inset-0 bg-[#080F1E]/50" />
+      </div>
 
+      {/* TODA LA WEB ENCIMA */}
+      <div className="relative z-10">
+        <Navbar />
 
-          <Outlet></Outlet>
+        <main>
+          <Outlet />
         </main>
 
-        <Footer></Footer>
+        <Footer />
       </div>
-    </>
+    </div>
   );
-};
+}

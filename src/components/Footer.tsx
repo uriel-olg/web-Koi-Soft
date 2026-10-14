@@ -67,7 +67,7 @@ export default function Footer() {
           CONTENIDO PRINCIPAL
       ========================================================= */}
 
-      <div className={`${container} relative py-16 md:py-20 lg:py-24`}>
+      <div className={`${container} relative py-10 lg:py-15`}>
         <div
           className="
             grid

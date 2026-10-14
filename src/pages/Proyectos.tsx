@@ -182,7 +182,7 @@ function VisualCaso({
   return (
     <div
       aria-hidden="true"
-      className={`relative overflow-hidden bg-[#0D1728] ${
+      className={`relative overflow-hidden  ${
         grande ? "min-h-[330px]" : "min-h-[230px]"
       }`}
     >
@@ -481,7 +481,7 @@ export default function Proyectos() {
   return (
     <main
       id="Proyectos"
-      className="overflow-hidden bg-[#080F1E] font-sans text-[#F3F5FA] selection:bg-[#FA713A]/30 [&_section[id]]:scroll-mt-28"
+      className="overflow-hidden font-sans text-[#F3F5FA] selection:bg-[#FA713A]/30 [&_section[id]]:scroll-mt-28"
     >
       {/* HERO */}
       <section className="relative overflow-hidden">
@@ -1037,7 +1037,7 @@ export default function Proyectos() {
       {/* NOTICE */}
       <section className="pb-5">
         <div className={container}>
-          <div className="flex flex-col gap-4 rounded-2xl border border-[#304059] bg-[#0D1727] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <div className="flex flex-col gap-4 rounded-2xl border border-[#642f00] bg-black/20 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <div className="flex items-start gap-3">
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#FA713A]/10 text-[#FA713A]">
                 <Sparkles size={16} aria-hidden="true" />
@@ -1056,7 +1056,7 @@ export default function Proyectos() {
 
             <Link
               to="/contacto"
-              className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold text-[#FFB297]"
+              className="inline-flex shrink-0 items-center gap-2 text-xs font-semibold text-[#ff7d4e]"
             >
               Consultar una necesidad
               <ArrowRight size={13} aria-hidden="true" />
@@ -1069,7 +1069,7 @@ export default function Proyectos() {
       <section
         id="casos"
         aria-labelledby="casos-titulo"
-        className="bg-[#080F1E] py-20 md:py-24 lg:py-28"
+        className=" py-20 md:py-24 lg:py-28"
       >
         <div className={container}>
           <motion.div
@@ -1271,7 +1271,7 @@ export default function Proyectos() {
           <div className="relative mt-14 grid gap-10 grid-cols-2 lg:grid-cols-4">
             <div
               aria-hidden="true"
-              className="absolute left-0 right-0 top-5 hidden h-px bg-linear-to-r from-[#FA713A]/40 via-[#304059] to-[#304059] lg:block"
+              className="absolute w-9/12 m-auto left-0 right-0 top-1 hidden h-px bg-linear-to-r from-[#FA713A]/40 via-[#304059] to-[#304059] lg:block"
             />
 
             {pasos.map((paso, index) => {
@@ -1287,7 +1287,7 @@ export default function Proyectos() {
                     duration: reduceMotion ? 0 : 0.5,
                     delay: reduceMotion ? 0 : index * 0.08,
                   }}
-                  className="relative flex flex-col items-start border-t border-[#304059] pt-6 lg:border-t-0"
+                  className="relative flex flex-col items-center text-center border-t border-[#304059] pt-6 lg:border-t-0"
                 >
                   <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-xl border border-[#FA713A]/15 bg-[#101A2B] text-[#FA713A] lg:-mt-10">
                     <Icon size={18} aria-hidden="true" />
