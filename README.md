@@ -152,6 +152,15 @@ Antes de abrir el formulario al público, incorporá límites de solicitudes y p
 | Error de conexión | Confirmá que el backend está ejecutándose y que el puerto es correcto. |
 | GitHub bloquea el push por secretos | Quitá las credenciales de los commits afectados y revocá las claves expuestas. |
 
+## Revisión de diseño y experiencia de uso
+
+La [guía de feedback UI/UX](docs/revision-ui-ux/feedback-y-guia.md) documenta los hallazgos sobre el commit de referencia y una propuesta de estructura, colores, tipografías, espaciados y componentes. Incluye capturas de escritorio, móvil y del problema observado en el navbar de tablet.
+
+- [Wireframe propuesto para escritorio y móvil](docs/revision-ui-ux/wireframe-propuesto.png).
+- [Versión SVG del wireframe](docs/revision-ui-ux/wireframe-propuesto.svg).
+
+La propuesta está pendiente de aprobación antes de implementarla en la web.
+
 ## Autor
 
 Desarrollado por **Uriel Olguin**.
