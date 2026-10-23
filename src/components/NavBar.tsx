@@ -37,7 +37,10 @@ export function Navbar() {
       media.removeEventListener("change", resize);
     };
   }, [menuOpen]);
+
+
   return (
+    
     <header className="site-header" ref={header}>
       <nav className="container nav-bar" aria-label="Navegación principal">
         <div onClick={() => setMenuOpen(false)}>
