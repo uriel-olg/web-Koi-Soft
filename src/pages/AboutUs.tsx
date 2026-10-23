@@ -1,8 +1,3 @@
-
-export const About = () =>{
-
-    return (    
-
-        <h1>about</h1>
-    )
-}
+export const About = () => {
+  return <h1>about</h1>;
+};

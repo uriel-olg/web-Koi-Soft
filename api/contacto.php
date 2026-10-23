@@ -74,20 +74,37 @@ if (!filter_var($datos['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 $servicios = [
-    'web' => 'Desarrollo web',
-    'catalogo' => 'Catálogos y contenido',
-    'automatizacion' => 'Integraciones y automatización',
-    'mantenimiento-web' => 'Optimización y mantenimiento web',
-    'pc' => 'Armado y actualización de PC',
-    'software' => 'Software y configuración',
-    'soporte' => 'Diagnóstico y mantenimiento IT',
-    'asesoramiento' => 'Necesito asesoramiento',
+    'Desarrollo web',
+    'Landing page',
+    'Catálogo digital',
+    'E-commerce',
+    'Automatizaciones',
+    'Sistemas a medida',
+    'Optimización / mantenimiento web',
+    'Armado o actualización de PC',
+    'Windows / software / configuración',
+    'Diagnóstico / mantenimiento IT',
+    'Redes y conectividad',
+    'Otro / Necesito asesoramiento',
 ];
+
+// Mantener compatibles los identificadores de formularios anteriores.
+$serviciosAnteriores = [
+    'web' => 'Desarrollo web',
+    'catalogo' => 'Catálogo digital',
+    'automatizacion' => 'Automatizaciones',
+    'mantenimiento-web' => 'Optimización / mantenimiento web',
+    'pc' => 'Armado o actualización de PC',
+    'software' => 'Windows / software / configuración',
+    'soporte' => 'Diagnóstico / mantenimiento IT',
+    'asesoramiento' => 'Otro / Necesito asesoramiento',
+];
+$datos['servicio'] = $serviciosAnteriores[$datos['servicio']] ?? $datos['servicio'];
 
 $presupuestos = ['', 'menos-500', '500-1500', 'mas-1500'];
 
 if (
-    !array_key_exists($datos['servicio'], $servicios) ||
+    !in_array($datos['servicio'], $servicios, true) ||
     !in_array($datos['presupuesto'], $presupuestos, true)
 ) {
     responder(400, ['error' => 'Revisá el servicio y el presupuesto']);
@@ -121,7 +138,7 @@ try {
         'Nombre: ' . $datos['nombre'],
         'Email: ' . $datos['email'],
         'Empresa: ' . ($datos['empresa'] ?: 'No especificada'),
-        'Servicio: ' . $servicios[$datos['servicio']],
+        'Servicio: ' . $datos['servicio'],
         'Presupuesto: ' . ($datos['presupuesto'] ?: 'No definido'),
         '',
         'Mensaje:',

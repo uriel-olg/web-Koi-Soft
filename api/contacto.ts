@@ -2,8 +2,8 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { Resend } from "resend";
-import { contactoSchema, serviceLabels } from "../src/schemas/contact.js";
-import type { DatosContacto } from "../src/schemas/contact.js";
+import { contactSchema } from "../shared/contact.ts";
+import type { ContactData } from "../shared/contact.ts";
 
 const app = express();
 
@@ -21,6 +21,9 @@ const resend = new Resend(RESEND_API_KEY);
 app.use(cors({ origin: FRONTEND_URL }));
 app.use(express.json({ limit: "20kb" }));
 
+const contactoSchema = contactSchema;
+type DatosContacto = ContactData;
+
 // Función de envío independiente de Express y del hosting.
 async function enviarConsulta(datos: DatosContacto) {
   const { error } = await resend.emails.send({
@@ -32,7 +35,7 @@ async function enviarConsulta(datos: DatosContacto) {
       `Nombre: ${datos.nombre}`,
       `Email: ${datos.email}`,
       `Empresa: ${datos.empresa || "No especificada"}`,
-      `Servicio: ${serviceLabels[datos.servicio]}`,
+      `Servicio: ${datos.servicio}`,
       `Presupuesto: ${datos.presupuesto || "No definido"}`,
       "",
       "Mensaje:",

@@ -1,51 +1,38 @@
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
-import { contact, navigation, whatsappUrl } from "../data/site";
-import { Brand } from "./ui";
+import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import Brand from "./Brand";
+import { contactEmail, navigation, whatsappUrl } from "../data/site";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container">
         <div className="footer-main">
-          <div className="footer-brand">
+          <div>
             <Brand />
-            <p>
-              Desarrollo web y soporte IT.
-              <br />
-              Tecnología con sentido, de principio a fin.
-            </p>
+            <p>Soluciones digitales. Soporte humano.</p>
           </div>
-          <nav aria-label="Navegación del pie de página">
-            <span className="footer-label">EXPLORAR</span>
-            {navigation.slice(1).map(({ to, label }) => (
-              <Link to={to} key={to}>
-                {label}
+          <nav aria-label="Navegación del pie" className="footer-links">
+            {navigation.slice(1).map((link) => (
+              <Link key={link.id} to={link.path}>
+                {link.label}
               </Link>
             ))}
-            <Link to="/#proceso">Cómo trabajamos</Link>
           </nav>
           <div className="footer-contact">
-            <span className="footer-label">EMPECEMOS UNA CONVERSACIÓN</span>
-            <a href={`mailto:${contact.email}`}>
-              {contact.email}
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </a>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              Escribinos por WhatsApp
-              <ArrowUpRight size={16} aria-hidden="true" />
+              <MessageCircle size={17} aria-hidden="true" /> WhatsApp{" "}
+              <ArrowUpRight size={14} aria-hidden="true" />
             </a>
-            <Link to="/contacto">
-              Ir al formulario
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </Link>
+            <a href={`mailto:${contactEmail}`}>
+              <Mail size={17} aria-hidden="true" /> {contactEmail}
+            </a>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>
-            © {new Date().getFullYear()} KoiBite. Todos los derechos reservados.
-          </span>
-          <span>Ideas claras. Soluciones que funcionan.</span>
-          <a href="#contenido">Volver arriba ↑</a>
+          <span>© {new Date().getFullYear()} KoiBite</span>
+          <span>Hecho con intención. Pensado para personas.</span>
+          <Link to="/#inicio">Volver arriba ↑</Link>
         </div>
       </div>
     </footer>

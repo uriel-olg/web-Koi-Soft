@@ -1,102 +1,97 @@
 import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router";
 import { ArrowUpRight, Menu, X } from "lucide-react";
-import { Link, NavLink } from "react-router";
-import { navigation } from "../data/site";
-import { Brand } from "./ui";
+import Brand from "./Brand";
+import { navigation, whatsappUrl } from "../data/site";
 
-export const Navbar = () => {
-  const [open, setOpen] = useState(false);
-  const header = useRef<HTMLElement>(null);
+export function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
+  const header = useRef<HTMLElement>(null);
+  const location = useLocation();
   useEffect(() => {
-    if (!open) return;
-    function onKey(event: KeyboardEvent) {
+    if (!menuOpen) return;
+    const close = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setOpen(false);
+        setMenuOpen(false);
         toggle.current?.focus();
       }
-    }
-    function onOutside(event: PointerEvent) {
+    };
+    const media = matchMedia("(min-width: 900px)");
+    const resize = () => {
+      if (media.matches) setMenuOpen(false);
+    };
+    const closeOutside = (event: PointerEvent) => {
       if (
         event.target instanceof Node &&
         !header.current?.contains(event.target)
       )
-        setOpen(false);
-    }
-    const desktop = window.matchMedia("(min-width: 1100px)");
-    const onResize = () => {
-      if (desktop.matches) setOpen(false);
+        setMenuOpen(false);
     };
-    document.addEventListener("keydown", onKey);
-    document.addEventListener("pointerdown", onOutside);
-    desktop.addEventListener("change", onResize);
+    document.addEventListener("pointerdown", closeOutside);
+    document.addEventListener("keydown", close);
+    media.addEventListener("change", resize);
     return () => {
-      document.removeEventListener("keydown", onKey);
-      document.removeEventListener("pointerdown", onOutside);
-      desktop.removeEventListener("change", onResize);
+      document.removeEventListener("pointerdown", closeOutside);
+      document.removeEventListener("keydown", close);
+      media.removeEventListener("change", resize);
     };
-  }, [open]);
+  }, [menuOpen]);
   return (
     <header className="site-header" ref={header}>
-      <div className="navbar container">
-        <div onClick={() => setOpen(false)}>
+      <nav className="container nav-bar" aria-label="Navegación principal">
+        <div onClick={() => setMenuOpen(false)}>
           <Brand />
         </div>
-        <nav className="desktop-nav" aria-label="Navegación principal">
-          {navigation.map(({ to, label }) => (
-            <NavLink key={to} to={to} end={to === "/"}>
-              {label}
-            </NavLink>
-          ))}
-        </nav>
-        <Link className="button button-primary nav-cta" to="/contacto">
-          Hablemos <ArrowUpRight size={17} aria-hidden="true" />
-        </Link>
+        <div
+          className={`nav-links ${menuOpen ? "is-open" : ""}`}
+          id="main-navigation"
+        >
+          {navigation.map((link) => {
+            const active =
+              location.pathname === "/"
+                ? (location.hash || "#inicio").toLowerCase() === `#${link.id}`
+                : location.pathname === link.path;
+            return (
+              <Link
+                key={link.id}
+                to={`/#${link.id}`}
+                aria-current={active ? "location" : undefined}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+          <a
+            className="mobile-contact"
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hablemos por WhatsApp <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+        </div>
+        <a
+          className="button button-small nav-cta"
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hablemos de tu idea <ArrowUpRight size={17} aria-hidden="true" />
+        </a>
         <button
           ref={toggle}
           className="menu-toggle"
           type="button"
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={open}
-          aria-controls="menu-movil"
-          onClick={() => setOpen(!open)}
+          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
-          {open ? (
-            <X size={23} aria-hidden="true" />
-          ) : (
-            <Menu size={23} aria-hidden="true" />
-          )}
+          {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
-      </div>
-      {open && (
-        <nav
-          id="menu-movil"
-          className="mobile-nav"
-          aria-label="Navegación móvil"
-        >
-          {navigation.map(({ to, label }, index) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={to === "/"}
-              onClick={() => setOpen(false)}
-            >
-              <span className="nav-index">0{index + 1}</span>
-              {label}
-              <ArrowUpRight size={18} aria-hidden="true" />
-            </NavLink>
-          ))}
-          <Link
-            to="/contacto"
-            className="button button-primary"
-            onClick={() => setOpen(false)}
-          >
-            Hablemos de tu proyecto{" "}
-            <ArrowUpRight size={18} aria-hidden="true" />
-          </Link>
-          <p>No hace falta hablar en técnico.</p>
-        </nav>
-      )}
+      </nav>
     </header>
   );
-};
+}

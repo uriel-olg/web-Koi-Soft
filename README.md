@@ -1,19 +1,5 @@
 # KoiBite · Servicios digitales
 
-## Nueva versión visual
-
-La interfaz usa una dirección azul noche y naranja, navegación responsive y cinco páginas: Inicio, Servicios, Proyectos, Nosotros y Contacto. Los ejemplos de Proyectos se identifican como conceptos o casos de uso, sin atribuir clientes ni resultados.
-
-- `pnpm dev`: vista local de la web.
-- `pnpm dev:api`: backend de contacto en otra terminal, con las variables privadas ya configuradas.
-- `pnpm build`: revisión TypeScript y compilación para publicación.
-
-La vista de Vite no envía correos por sí sola. El formulario muestra un error y conserva los datos si el backend no está disponible. En desarrollo, `/api` se dirige al backend local del puerto 3001 por defecto. `VITE_API_URL` permite usar otra base pública; `VITE_CONTACT_ENDPOINT` permite configurar una ruta completa, por ejemplo `/api/contacto.php` en un hosting PHP. `VITE_WHATSAPP_NUMBER` permite configurar el celular con su prefijo internacional.
-
-El contrato de servicios vive en `src/data/contact.ts` y la validación compartida en `src/schemas/contact.ts`. El backend PHP conserva el mismo mapa de identificadores. Actualizar ambos al agregar servicios. En un despliegue PHP, publicar también `api/contacto.php`: no forma parte del build estático de Vite.
-
-Fuentes: Manrope e Inter desde Google Fonts, con fuentes de sistema como alternativa. Los visuales de ejemplo se dibujan con HTML/CSS; no requieren imágenes externas. La guía de diseño está en `docs/revision-ui-ux/propuesta-diseno-v2.md`.
-
 Sitio web de servicios digitales orientado a presentar soluciones de desarrollo web, catálogos, e-commerce y automatizaciones, mostrar proyectos y facilitar el contacto con potenciales clientes.
 
 Desarrollado con **React, TypeScript y Tailwind CSS**, con un formulario validado mediante **React Hook Form y Zod** y un backend de **Node.js + Express** para enviar consultas por correo con **Resend**.
@@ -173,10 +159,32 @@ La [guía de feedback UI/UX](docs/revision-ui-ux/feedback-y-guia.md) documenta l
 - [Wireframe propuesto para escritorio y móvil](docs/revision-ui-ux/wireframe-propuesto.png).
 - [Versión SVG del wireframe](docs/revision-ui-ux/wireframe-propuesto.svg).
 
-La propuesta está pendiente de aprobación antes de implementarla en la web.
+La web incorpora la propuesta visual aprobada, combinada con los contenidos y funciones de la versión anterior. La revisión histórica queda como referencia.
 
 ## Autor
 
 Desarrollado por **Uriel Olguin**.
 
 [GitHub](https://github.com/uriel-olg) · [Repositorio](https://github.com/uriel-olg/web-Koi-Soft)
+
+## Landing actualizada
+
+La portada reúne servicios, 12 propuestas ilustrativas filtrables (6 software y 6 IT), nosotros, proceso de trabajo y formulario. Se conservan `/servicios`, `/proyectos`, `/nosotros` y `/contacto`, además de los enlaces con anclas anteriores. Los componentes compartidos están en `src/sections/` y los datos tipados en `src/data/site.ts`.
+
+- `pnpm dev`: frontend. Vite deriva `/api` al backend Express en el puerto 3001.
+- `pnpm exec tsx watch api/contacto.ts`: backend, con las variables privadas documentadas arriba. No se necesitan para navegar por el frontend.
+- `pnpm build`: TypeScript y compilación de producción.
+- `pnpm lint`: revisión de código.
+- `pnpm test`: validación compartida del formulario, compatibilidad de servicios con PHP y correspondencia con las propuestas publicadas.
+
+El formulario usa React Hook Form y un esquema Zod compartido con Express en `shared/contact.ts`. Los botones de servicios y proyectos preseleccionan el servicio mediante la URL. Ante un error de envío se conservan los datos; solo se confirma éxito con una respuesta JSON `{ ok: true }`. El envío real requiere una configuración válida de Resend. Para un backend separado se admite `VITE_API_URL`; sin esa variable se usa `/api/contacto` en el mismo origen. El servidor de producción debe derivar esa ruta a Express o a la alternativa PHP.
+
+Se mantienen el email y el número de WhatsApp de la versión anterior en `src/data/site.ts`. No se muestran perfiles sociales sin una URL real configurada.
+
+Tipografía Manrope alojada localmente, bajo licencia SIL OFL incluida en `public/fonts/OFL.txt`. Imagen del hero generada para la propuesta y optimizada a WebP; procedencia en `public/images/README.md`.
+
+### Compatibilidad con la versión anterior
+
+Esta restauración mantiene el contenido de `docs/revision-ui-ux/`, las preguntas frecuentes, `pnpm dev:api`, el cierre del menú al pulsar fuera y la navegación accesible con foco. WhatsApp conserva el prefijo internacional de main y admite `VITE_WHATSAPP_NUMBER`. Para hosting PHP se mantiene `VITE_CONTACT_ENDPOINT=/api/contacto.php`; el proxy de Vite respeta `VITE_API_URL`.
+
+Los servicios admiten tanto las etiquetas actuales como los ocho identificadores anteriores (`web`, `catalogo`, `automatizacion`, `mantenimiento-web`, `pc`, `software`, `soporte`, `asesoramiento`). Los identificadores se normalizan antes de validar y enviar; los enlaces anteriores siguen preseleccionando el servicio.
