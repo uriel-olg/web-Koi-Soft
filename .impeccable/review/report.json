@@ -1,0 +1,245 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "width": 1440,
+      "bodyWidth": 1425,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/servicios",
+      "width": 1440,
+      "bodyWidth": 1425,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/proyectos",
+      "width": 1440,
+      "bodyWidth": 1425,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/nosotros",
+      "width": 1440,
+      "bodyWidth": 1425,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/contacto",
+      "width": 1440,
+      "bodyWidth": 1425,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "bodyWidth": 1009,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/servicios",
+      "width": 1024,
+      "bodyWidth": 1009,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/proyectos",
+      "width": 1024,
+      "bodyWidth": 1009,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/nosotros",
+      "width": 1024,
+      "bodyWidth": 1009,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/contacto",
+      "width": 1024,
+      "bodyWidth": 1009,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "bodyWidth": 753,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/servicios",
+      "width": 768,
+      "bodyWidth": 753,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/proyectos",
+      "width": 768,
+      "bodyWidth": 753,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/nosotros",
+      "width": 768,
+      "bodyWidth": 753,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/contacto",
+      "width": 768,
+      "bodyWidth": 753,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "bodyWidth": 390,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/servicios",
+      "width": 390,
+      "bodyWidth": 390,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/proyectos",
+      "width": 390,
+      "bodyWidth": 390,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/nosotros",
+      "width": 390,
+      "bodyWidth": 390,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/contacto",
+      "width": 390,
+      "bodyWidth": 390,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/",
+      "width": 320,
+      "bodyWidth": 320,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/servicios",
+      "width": 320,
+      "bodyWidth": 320,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/proyectos",
+      "width": 320,
+      "bodyWidth": 320,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/nosotros",
+      "width": 320,
+      "bodyWidth": 320,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    },
+    {
+      "route": "/contacto",
+      "width": 320,
+      "bodyWidth": 320,
+      "h1": 1,
+      "newsreader": true,
+      "brokenImages": [],
+      "overflow": []
+    }
+  ],
+  "interactions": {
+    "all": 12,
+    "it": 6,
+    "software": 6,
+    "menu": "true",
+    "menuClosed": true,
+    "preselect": "Desarrollo web",
+    "invalid": 3,
+    "legacyAnchor": "servicios",
+    "errorPreserves": true,
+    "successClears": true,
+    "faq": true,
+    "textIntegrity": true,
+    "notFound": true
+  },
+  "errors": []
+}

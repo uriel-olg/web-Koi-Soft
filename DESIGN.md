@@ -1,38 +1,44 @@
 ---
 name: KoiBite
-description: Tecnología cercana, soluciones claras y soporte humano.
+description: Diseño web y soporte IT con criterio humano.
 colors:
-  ink: "#162b3e"
-  navy: "#17334f"
-  muted: "#536778"
-  accent: "#bd4c10"
-  accent-hover: "#9d3d0a"
-  orange: "#d85b1b"
-  peach: "#ffeddf"
-  paper: "#f5f8fa"
-  line: "#dce4e9"
-  white: "#ffffff"
-  focus: "#3269a0"
-  field-border: "#c9d4dd"
+  canvas: "#f6f3ed"
+  surface: "#ffffff"
+  ink: "#182530"
+  muted: "#52616b"
+  accent: "#b84e2d"
+  accent-text: "#9e3e23"
+  accent-hover: "#9e3e23"
+  accent-active: "#84321c"
+  peach: "#f0e3d8"
+  paper: "#eeeee7"
+  sage: "#e3e9e0"
+  moss: "#4e6558"
+  line: "#d3d4cb"
+  control: "#7b867d"
+  focus: "#28594f"
+  focus-inverse: "#f2c29b"
+  danger: "#a9312c"
+  success: "#296448"
 typography:
   display:
-    fontFamily: "Manrope, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.65rem, 4.5vw, 4.05rem)"
-    fontWeight: 700
-    lineHeight: 1.14
-    letterSpacing: "-0.04em"
-  headline:
-    fontFamily: "Manrope, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2rem, 3.3vw, 2.9rem)"
-    fontWeight: 700
-    lineHeight: 1.16
-    letterSpacing: "-0.035em"
-  title:
-    fontFamily: "Manrope, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "1.2rem"
-    fontWeight: 700
-    lineHeight: 1.16
+    fontFamily: "Newsreader, Georgia, serif"
+    fontSize: "clamp(3.25rem, 5.65vw, 5.25rem)"
+    fontWeight: 400
+    lineHeight: 1.04
     letterSpacing: "-0.025em"
+  headline:
+    fontFamily: "Newsreader, Georgia, serif"
+    fontSize: "clamp(2.4rem, 3.65vw, 3.5rem)"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.025em"
+  title:
+    fontFamily: "Newsreader, Georgia, serif"
+    fontSize: "32px"
+    fontWeight: 400
+    lineHeight: 1.15
+    letterSpacing: "-0.02em"
   body:
     fontFamily: "Manrope, ui-sans-serif, system-ui, sans-serif"
     fontSize: "16px"
@@ -40,212 +46,227 @@ typography:
     lineHeight: 1.7
   label:
     fontFamily: "Manrope, ui-sans-serif, system-ui, sans-serif"
-    fontSize: "13px"
-    fontWeight: 700
+    fontSize: "14px"
+    fontWeight: 600
     lineHeight: 1.5
 rounded:
-  field: "7px"
-  button: "10px"
-  icon: "12px"
-  card: "14px"
-  form: "16px"
+  field: "6px"
+  button: "8px"
+  brand: "10px"
+  visual: "12px"
   chip: "24px"
   circle: "50%"
 spacing:
   xs: "8px"
   sm: "12px"
   md: "16px"
-  gap: "18px"
   lg: "24px"
   xl: "32px"
-  section-mobile: "62px"
-  section-tablet: "72px"
-  section: "96px"
+  panel: "36px"
+  wide: "48px"
+  section-small: "48px"
+  section-mobile: "60px"
+  section-tablet: "80px"
+  section: "104px"
 components:
   button-primary:
     backgroundColor: "{colors.accent}"
-    textColor: "{colors.white}"
+    textColor: "{colors.surface}"
     typography: "{typography.label}"
     rounded: "{rounded.button}"
-    padding: "14px 23px"
+    padding: "14px 22px"
   button-primary-hover:
     backgroundColor: "{colors.accent-hover}"
+  button-primary-active:
+    backgroundColor: "{colors.accent-active}"
+  text-link:
+    textColor: "{colors.accent-text}"
+    typography: "{typography.label}"
   button-secondary:
-    backgroundColor: "{colors.white}"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
     rounded: "{rounded.button}"
-    padding: "14px 23px"
+    padding: "14px 22px"
   input:
-    backgroundColor: "{colors.white}"
+    backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
     rounded: "{rounded.field}"
-    padding: "11px 12px"
+    padding: "12px 14px"
     width: "100%"
   nav-link:
-    textColor: "{colors.ink}"
-    padding: "12px 0"
+    textColor: "{colors.muted}"
+    padding: "13px 0"
   nav-link-active:
     textColor: "{colors.accent}"
   filter-chip:
     textColor: "{colors.ink}"
     rounded: "{rounded.chip}"
-    padding: "8px 18px"
+    padding: "9px 18px"
   filter-chip-selected:
-    backgroundColor: "{colors.navy}"
-    textColor: "{colors.white}"
-  project-card:
-    backgroundColor: "{colors.white}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.surface}"
+  service-row:
     textColor: "{colors.ink}"
-    rounded: "{rounded.card}"
-  service-card:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.card}"
-    padding: "28px 23px 21px"
+    padding: "30px 0"
   contact-form:
-    backgroundColor: "{colors.white}"
+    backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.form}"
-    padding: "31px"
+    rounded: "{rounded.visual}"
+    padding: "36px"
 ---
 
 # Design System: KoiBite
 
 ## Overview
 
-**Creative North Star: "Tecnología de tu lado"**
+**Creative North Star: "Tecnología con criterio humano"**
 
-Una identidad clara y cercana que presenta capacidad técnica sin dificultar la lectura. El blanco y las superficies suaves dejan respirar el contenido; el azul marino aporta estructura y el naranja cálido guía acciones y detalles de marca.
+Una identidad editorial cálida que acerca diseño web y soporte IT. El marfil deja respirar la información; la tinta estructura la lectura, el terracota identifica las acciones y la salvia acompaña la forma de trabajar.
 
-El logo koi existente mantiene la continuidad de KoiBite. Manrope, las esquinas suavizadas y los iconos de línea dan un carácter práctico y amable. Las imágenes y las miniaturas explican posibilidades: su condición ilustrativa debe permanecer explícita.
+Newsreader aporta carácter a los títulos y Manrope mantiene claros los párrafos, la navegación y los formularios. El logo koi conserva la continuidad de marca. La composición se apoya en espacio, líneas finas y visuales acotados; los conceptos ilustrativos permanecen identificados.
 
 **Key Characteristics:**
 
-- Espacio generoso y jerarquía directa.
-- Azul marino estructural y naranja cálido contenido.
-- Tipografía única, legible y cercana.
-- Superficies suaves con profundidad puntual.
-- Ilustraciones honestas y contacto visible.
+- Marfil, tinta, terracota y salvia con funciones claras.
+- Títulos editoriales y controles de lectura directa.
+- Filas de servicios y propuestas sin cajas repetidas.
+- Profundidad puntual y movimiento breve.
+- Contacto visible e ilustraciones honestas.
 
-Los valores de color y la familia tipográfica se extraen de `src/index.css`; dimensiones y estados, de `src/App.css`. El frontmatter registra esos valores y el código sigue siendo la fuente de implementación. No existe un modo oscuro alternativo.
+El frontmatter registra los valores implementados en `src/index.css` y `src/App.css`. El código define los estados y las variantes por ancho. `docs/revision-ui-ux/propuesta-diseno-v3.md` se conserva como propuesta histórica; este documento describe el resultado implementado. La interfaz utiliza un esquema claro.
 
 ## Colors
 
-La paleta combina blancos frescos, azules profundos y un acento cálido con dos funciones diferenciadas.
+La paleta combina un fondo cálido, texto de alto contraste y dos apoyos naturales contenidos.
 
 ### Primary
 
-- **Naranja de acción** (`accent`): botones principales y enlaces destacados. Su variante `accent-hover` oscurece la respuesta al puntero.
-- **Naranja de marca** (`orange`): énfasis del titular, punto del logotipo e iconos. No sustituir automáticamente el tono más oscuro de los botones.
-- **Durazno suave** (`peach`): fondos de iconos y números del proceso.
+- **Terracota de acción** (`accent`): botones y énfasis editorial de titulares. `accent-hover` y `accent-active` oscurecen la respuesta del botón.
+- **Terracota de lectura** (`accent-text`): enlaces de texto, categorías de propuestas y pie pequeño de la pieza editorial. El tono más oscuro mantiene la legibilidad sobre papel y arcilla pálida.
+- **Arcilla pálida** (`peach`): pieza editorial auxiliar y selección de texto.
+
+### Secondary
+
+- **Salvia** (`sage`): bloque sobre la forma de trabajar y confirmaciones.
+- **Musgo** (`moss`): texto e iconos sobre salvia y etiquetas secundarias.
 
 ### Neutral
 
-- **Tinta azul** (`ink`): texto principal y base del emblema.
-- **Azul marino** (`navy`): bloque de contacto y filtros seleccionados.
-- **Azul gris de lectura** (`muted`): párrafos secundarios.
-- **Papel frío** (`paper`) y **blanco** (`white`): alternancia de secciones y tarjetas.
-- **Línea suave** (`line`): divisores y contornos secundarios.
-- **Azul de foco** (`focus`): contorno de navegación con teclado.
-- **Borde de campo** (`field-border`): separación de campos sobre el formulario blanco.
+- **Marfil** (`canvas`): fondo principal y panel del formulario.
+- **Blanco** (`surface`): campos y visual principal.
+- **Tinta** (`ink`): texto principal, filtros seleccionados y cierre de contacto.
+- **Gris de lectura** (`muted`): descripciones y texto secundario.
+- **Papel** (`paper`): fondo de propuestas y respuesta del botón secundario.
+- **Línea** (`line`): divisores decorativos.
+- **Borde de control** (`control`): campos, filtros y botón de menú.
+- **Verde de foco** (`focus`) y **durazno de foco inverso** (`focus-inverse`): navegación por teclado sobre fondos claros y oscuros.
+- **Error** (`danger`) y **confirmación** (`success`): mensajes y estados del formulario, acompañados de texto.
 
-**The Accent Role Rule.** Usar el naranja de acción para controles con texto blanco y el naranja de marca para énfasis visual; conservar la diferencia implementada.
+**The Action Accent Rule.** Usar el terracota de acción en botones y titulares; los enlaces de texto, las categorías y el pie editorial pequeño usan el terracota de lectura más oscuro. Mantener ambos opacos y conservar sus roles.
 
-Los estados de validación conservan sus colores específicos en CSS. Las miniaturas ilustrativas admiten sus propios azules, verdes y tonos tierra; no forman una paleta adicional de interfaz.
+Los alias de compatibilidad `navy` y `orange` del CSS resuelven a tinta y terracota; no son colores adicionales. Las miniaturas conservan colores propios de ilustración, sin convertirlos en nuevos roles de interfaz.
 
 ## Typography
 
-**Display Font:** Manrope, con respaldo de sistema sans serif.
-**Body Font:** Manrope, con el mismo respaldo.
+**Display Font:** Newsreader, con Georgia como respaldo.
+**Body Font:** Manrope, con respaldo sans serif del sistema.
 
-La familia está autoalojada en `public/fonts/`, con archivos para los pesos 400, 600 y 700 y licencia SIL OFL incluida. La jerarquía depende del tamaño, peso y espacio, sin introducir otra familia.
+Ambas familias están autoalojadas en `public/fonts/` con `font-display: swap`. Newsreader cuenta con archivos variables normal y cursiva, eje de peso 200–800; la interfaz usa principalmente 400 y el wordmark ilustrativo usa 500. Manrope dispone de 400, 600 y 700. Procedencia y licencias están en esa carpeta. Se aplica ajuste óptico automático.
 
 ### Hierarchy
 
-- **Display:** titular del hero, con el tamaño fluido del frontmatter, interlineado compacto y énfasis naranja. En tablet se ajusta a 42 px; en móvil usa `clamp(35px, 10.4vw, 46px)`.
-- **Headline:** títulos de sección equilibrados, con el tamaño fluido del frontmatter. En móvil se ajustan a 32 px. El bloque de contacto tiene una escala propia acorde con su mayor presencia.
-- **Title:** títulos de tarjetas y subsecciones; las variantes observadas van de 17 a 22 px según componente y ancho.
-- **Body:** base de 16 px. Las descripciones de secciones y tarjetas usan 13–14 px e interlineados amplios; el texto principal del hero conserva 16 px en escritorio.
-- **Label:** acciones de 13 px y peso 700; navegación de 13 px y peso 600. Los campos usan etiquetas visibles; su texto sube a 16 px en móvil.
+- **Display:** hero centrado, escala fluida del frontmatter y una frase cursiva terracota. Cambia a una escala compacta en tablet y móvil; a menos de 360 px usa 36 px.
+- **Headline:** títulos de sección en Newsreader regular. Contacto, proceso y páginas internas tienen tamaños propios según su jerarquía.
+- **Title:** títulos de propuestas en Newsreader; los de servicios usan 31 px en escritorio. Valores, pasos y título del formulario usan Manrope de peso 600.
+- **Body:** base de 16 px; bajada del hero de 16 px, reducida a 15 px en móvil. Las descripciones suelen usar 14–15 px con interlineado amplio.
+- **Label:** acciones de 14 px y peso 600; navegación de 13 px en escritorio y 16 px en el menú desplegado. Campos de 16 px y etiquetas visibles de 13 px.
 
-Mantener títulos breves, con espaciado negativo y balance de líneas. Los párrafos del hero se limitan a 475 px; los de presentación, a 530 px.
+Los títulos equilibran líneas y usan espaciado negativo. La bajada del hero se limita a 630 px; las respuestas de FAQ, a 65 caracteres aproximados por línea. El microtexto dentro de una maqueta es decorativo y su descripción legible permanece fuera de ella.
+
+**The Two Voices Rule.** Usar Newsreader para títulos editoriales y Manrope para lectura, navegación y controles.
 
 ## Layout
 
-El contenedor de escritorio tiene un máximo de 1240 px y deja 40 px por lado. Hasta 1150 px deja 32 px; hasta 639 px deja 20 px. Las secciones usan la separación vertical del frontmatter, reducida en tablet y móvil.
+El contenedor tiene un máximo interior de 1280 px y márgenes de 48 px por lado. Hasta 1199 px usa 32 px; hasta 767 px, 20 px; por debajo de 360 px, 16 px. Las secciones usan las separaciones de escritorio, tablet, móvil y móvil pequeño del frontmatter.
 
-El encabezado es adhesivo: 88 px en escritorio, 78 px hasta 899 px y 74 px hasta 639 px. El desplazamiento a anclas reserva espacio para él. El hero divide texto e imagen en dos columnas y los apila en móvil; la ilustración conserva su espacio y sus notas flotantes.
+La navegación es adhesiva: 88 px en escritorio, 78 px hasta 1099 px y 74 px hasta 767 px. El desplazamiento reserva 104 px en escritorio y 88 px en móvil. El menú completo aparece desde 1100 px; por debajo se usa un desplegable con altura máxima ajustada a la pantalla y desplazamiento interno.
 
-Los servicios pasan de cuatro a dos columnas hasta 899 px; por debajo de 360 px usan una. Las propuestas pasan de tres a dos columnas hasta 899 px y a una hasta 639 px. Nosotros y contacto se apilan hasta 639 px. El formulario pasa de dos columnas de campos a una hasta 899 px. El proceso mantiene cuatro pasos y usa dos columnas en móvil.
+Las composiciones combinan columnas amplias con contenido más acotado. Servicios y FAQ usan introducción lateral y filas a la derecha; nosotros y contacto, dos columnas. Se apilan hasta 767 px. Las propuestas usan dos columnas; la selección de Inicio tiene columnas asimétricas y desfase vertical de la segunda pieza. En móvil se presenta una sola columna.
 
-Los cambios responden a límites observados de 1150, 899, 639 y 359 px; una regla desde 1500 px ajusta el encuadre del hero. No imponer una cuadrícula nueva al añadir contenido equivalente.
+El hero centra texto y acciones sobre un visual principal con dos apoyos. La imagen lateral desaparece hasta 1099 px y la pieza editorial auxiliar hasta 767 px. El contenido necesario permanece en el texto principal. Los campos pasan de dos columnas a una hasta 479 px. El proceso pasa de cuatro columnas a dos hasta 767 px y a lista vertical hasta 479 px.
+
+Los límites observados son 1199, 1099, 767, 479 y 359 px. No fijar alturas a bloques de texto o formularios; las dimensiones fijas de las miniaturas pertenecen a ilustraciones recortadas.
 
 ## Elevation & Depth
 
-La profundidad procede sobre todo de la alternancia de superficies, los contornos y el contraste del bloque de contacto. Las tarjetas de servicios y propuestas permanecen planas. Las sombras se reservan para notas sobre la imagen, miniaturas de navegador y menú desplegado.
+El espacio, las líneas finas y la alternancia tonal construyen la mayor parte de la profundidad. Las filas de servicios y los cuerpos de propuestas permanecen planos. Las sombras se reservan para los visuales enmarcados y el menú móvil abierto.
 
 ### Shadow Vocabulary
 
-- **Nota del hero:** `0 14px 40px #152d4212`; separa las etiquetas blancas de la imagen.
-- **Miniatura de navegador:** `0 10px 25px #25456212`; sitúa el ejemplo dentro de su marco ilustrativo.
-- **Menú móvil:** `0 20px 35px #162b3e12`; separa la navegación abierta del contenido.
+- **Visual principal:** `0 16px 40px rgb(24 37 48 / 8%)`.
+- **Navegador de propuesta:** `0 12px 28px rgb(24 37 48 / 10%)`.
+- **Menú móvil:** `0 20px 35px rgb(24 37 48 / 8%)`.
 
-**The Quiet Surface Rule.** Mantener planas las tarjetas de contenido; reservar las sombras para capas que se superponen de verdad.
+**The Quiet Surface Rule.** Mantener planas las superficies de contenido; las sombras separan visuales y navegación superpuestos.
 
-Las respuestas de controles duran 0.2 s; el botón asciende 2 px al pasar el puntero y vuelve al pulsarlo. La entrada del texto del hero dura 0.65 s y recorre 12 px. La preferencia de movimiento reducido desactiva animaciones, transiciones y desplazamiento suave.
+Los controles responden en 160 ms. El visual principal asciende 4 px en 220 ms al pasar el puntero; las flechas avanzan ligeramente. La entrada del texto del hero dura 600 ms y recorre 8 px. CSS y Motion respetan movimiento reducido; el contenido no depende de animaciones para estar disponible.
 
 ## Shapes
 
-Las esquinas son suaves y funcionales: campos pequeños, botones contenidos, tarjetas más abiertas y formulario ligeramente más redondeado, según los roles del frontmatter. Los filtros son cápsulas; el emblema koi, los indicadores y los números del proceso son circulares.
+Las formas son contenidas: campos de radio pequeño, botones y menú suavizados, visuales más abiertos y filtros en cápsula, según el frontmatter. El emblema koi conserva su forma y se aloja en una marca redondeada; muestras de color y otros detalles ilustrativos pueden ser circulares.
 
-Los contornos son finos, de 1 px. No convertir cada superficie en una cápsula ni añadir bordes gruesos. Las miniaturas pueden contener formas propias porque representan objetos y pantallas, no controles nuevos.
+Los contornos son finos (1 px). La línea decorativa separa secciones; el borde de control identifica campos e interacciones. Las propuestas usan visual redondeado y texto debajo, sin otra caja exterior.
 
 ## Components
 
 ### Buttons
 
-Acciones claras, con texto en caja normal e iconos de línea cuando ayudan a indicar destino.
+Acciones de texto directo, con iconos de línea cuando aclaran el destino.
 
-- **Primary:** naranja de acción, texto blanco, altura mínima de 52 px y separación de 18 px entre etiqueta e icono. La versión pequeña tiene 46 px de altura mínima.
-- **Secondary:** blanco, texto tinta y borde suave; al pasar el puntero usa un fondo azul gris muy claro.
-- **Hover / Focus:** el principal oscurece y asciende; el foco visible usa un contorno azul de 3 px separado 5 px. El estado deshabilitado reduce opacidad y evita desplazamiento.
-- **Text link:** naranja de acción, peso fuerte, subrayado al pasar el puntero y avance leve de la flecha.
+- **Primary:** terracota con texto blanco, altura mínima de 52 px y espacio de 24 px entre texto e icono. La variante pequeña tiene un mínimo de 46 px.
+- **Secondary:** fondo transparente, texto tinta y borde de control; el hover usa papel.
+- **Hover / Active / Focus:** el primario oscurece en dos pasos. El foco global usa contorno de 3 px separado 5 px; los enlaces sobre cierre oscuro usan foco inverso.
+- **Disabled:** el botón usa fondo gris de lectura; los campos se deshabilitan y reducen opacidad mientras se envía. El texto y el indicador explican ese estado.
+- **Text link:** terracota de lectura, peso 600, mínimo de 44 px y subrayado al pasar el puntero.
 
 ### Chips
 
-Los filtros llevan contorno azul gris y contador secundario. El seleccionado cambia a azul marino con texto blanco, expresado con `aria-pressed`. Conservan una altura mínima de 43 px. Las etiquetas de tecnologías dentro de tarjetas son más pequeñas, con fondo suave y radio de 5 px; no funcionan como filtros.
+Filtros de propuestas con borde de control, contador y altura mínima de 44 px. La selección usa tinta y texto blanco, y se expresa mediante `aria-pressed`. Las etiquetas de tecnologías son texto musgo separado por barras; no son controles ni cápsulas.
 
 ### Cards / Containers
 
-Los servicios usan papel frío, icono sobre durazno, título, descripción, lista y enlace. Las propuestas usan tarjeta blanca, visual ilustrativo superior y cuerpo de 24 px de relleno en escritorio. Ambas comparten el radio de tarjeta y mantienen los enlaces al final del contenido sin convertir el artículo entero en un control.
+Servicios presentados como filas con icono, título editorial, descripción y enlace o lista. Las propuestas presentan visual ilustrativo redondeado, categoría, título, descripción, tecnologías y enlace explícito. En Inicio se muestran dos propuestas; la página dedicada conserva las doce y sus filtros. El aviso de concepto permanece junto a la sección.
 
 ### Inputs / Fields
 
-Campos blancos con borde fino, radio de campo y etiquetas encima. Input y select tienen al menos 44 px de altura; textarea permite redimensionado vertical. El foco global debe mantenerse visible. Un error cambia el contorno y añade una explicación asociada mediante `aria-describedby`; no depender solo del color. El formulario deshabilita los campos mientras envía, muestra el estado y conserva los datos ante un fallo.
+Panel marfil sobre cierre tinta; campos blancos, borde de control, radio de campo y relleno del frontmatter. Input y select tienen altura mínima de 48 px; textarea permite redimensionado vertical. El error añade contorno y mensaje asociado. Los datos se conservan si falla el envío y la confirmación requiere una respuesta válida del servicio.
 
 ### Navigation
 
-Encabezado blanco con marca a la izquierda, enlaces al centro y contacto a la derecha. El enlace actual usa naranja y una línea inferior en escritorio. Hasta 899 px aparece el botón de menú; el panel abierto apila enlaces y añade contacto por WhatsApp. Escape lo cierra y devuelve el foco al botón. En móvil se oculta el botón externo de contacto para dejar espacio a la marca y el menú.
+Encabezado marfil con línea inferior, marca, rutas y acceso a WhatsApp. El enlace actual usa terracota y una línea inferior en escritorio. El menú móvil no modal incluye `aria-expanded` y `aria-controls`, cierra por Escape, enlace o pulsación exterior, y devuelve el foco al botón al cerrar por Escape.
+
+### FAQ
+
+Acordeón nativo con `details` y `summary`, separadores y un indicador que gira al abrir. La pregunta mantiene un área interactiva amplia; la respuesta se lee en Manrope con interlineado generoso.
 
 ### Illustrative previews
 
-Las propuestas combinan pequeños navegadores, diagramas y objetos de hardware para explicar una posibilidad. Su detalle puede ser pequeño porque es ilustración, pero la categoría, el título y la explicación deben permanecer como texto legible fuera de la miniatura. Mantener el aviso de que son conceptos, no resultados de clientes.
+El visual principal es una interfaz conceptual con pie explícito. La imagen de espacio de trabajo es generada y decorativa, no un caso real. Las miniaturas de propuestas representan posibilidades de software y soporte: la categoría, título, explicación y contacto permanecen como texto fuera de la ilustración.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** mantener el logo koi existente y la voz cercana en español.
-- **Do** usar los colores y la tipografía extraídos del código como referencia compartida.
-- **Do** conservar espacio entre secciones, jerarquía clara y adaptación a móvil.
-- **Do** mantener foco visible, etiquetas reales y estados de selección y envío comprensibles.
+- **Do** conservar el logo koi y la voz cercana en español con voseo.
+- **Do** usar marfil como base, tinta para lectura y terracota para acciones.
+- **Do** mantener las familias y los estados definidos por el código compartido.
+- **Do** conservar foco visible, etiquetas persistentes y mensajes de error asociados.
 - **Do** identificar las propuestas y las imágenes generadas como ilustrativas.
 
 ### Don't:
 
-- **Don't** presentar conceptos como clientes, proyectos realizados o resultados medidos.
-- **Don't** intercambiar el naranja de marca y el de acción sin comprobar su función y legibilidad.
-- **Don't** añadir sombras a todas las tarjetas ni introducir otra familia tipográfica.
+- **Don't** presentar conceptos como clientes, trabajos realizados o resultados medidos.
+- **Don't** convertir los servicios y las propuestas en una colección de paneles con sombra.
+- **Don't** usar la serif para campos, navegación o explicaciones técnicas.
 - **Don't** reemplazar datos reales de contacto ni inventar enlaces sociales.
-- **Don't** ocultar errores, anunciar entrega de correo sin evidencia o borrar datos tras un fallo.
+- **Don't** anunciar entrega de correo sin evidencia ni borrar datos después de un fallo.

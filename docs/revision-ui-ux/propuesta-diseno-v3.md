@@ -181,12 +181,13 @@ Para texto normal, usar al menos 4,5:1; para texto grande, 3:1 según su tamaño
 
 Alternativa gratuita para títulos: [Source Serif 4](https://github.com/adobe-fonts/source-serif). Alternativa de cuerpo: la Manrope que ya utiliza el proyecto. Sin descargas: Georgia para títulos y `system-ui` para cuerpo. La lámina SVG usa fuentes de sistema; la comparación tipográfica definitiva deberá hacerse con los archivos reales en Figma.
 
-| Estilo | Desktop px / interlineado | Tablet | Móvil | Peso / tracking |
-| --- | --- | --- | --- | --- |
-| H1 | 80 / 84 | 64 / 68 | 44 / 48; 38 / 42 a 320 px | 400; -0,025em |
-| H2 | 48 / 54 | 40 / 46 | 34 / 40 | 400; -0,02em |
-| H3 | 26 / 34 | 24 / 32 | 24 / 32 | 500; -0,015em |
-| Bajada hero | 18 / 29 | 18 / 29 | 17 / 27 | 400; 0 |
+| Estilo | Desktop px / interlineado| Tablet | Móvil | Peso / tracking |
+| ---    | --- | --- | --- | --- |
+| H1     | 80 / 84   | 64 / 68   | 44 / 48; 38 / 42 a 320 px | 400; -0,025em |
+| H2     | 48 / 54   | 40 / 46   | 34 / 40    | 400; -0,02em |
+| H3     | 26 / 34   | 24 / 32   | 24 / 32    | 500; -0,015em |
+| Bajada | 18 / 29   | 18 / 29   | 17 / 27    | 400;0 |
+  hero               
 | Párrafo | 16 / 27 | 16 / 27 | 16 / 27 | 400; 0 |
 | Botón | 14 / 20 | 14 / 20 | 16 / 24 | 600; 0 |
 | Navbar | 14 / 20 | Menú 16 / 24 | Menú 16 / 24 | 500; 0 |
@@ -201,10 +202,10 @@ Cargar WOFF2, limitar los estilos a los usados y aplicar `font-display: swap`. U
 
 El ancho interior máximo es **1280 px**. A 1440 px, el contenido queda a 80 px de cada borde. En CSS puede expresarse con un contenedor exterior de 1376 px que incluya 48 px de padding por lado; no confundir ancho interior con caja exterior.
 
-| Pantalla | Margen mínimo | Columnas | Gutter | Padding vertical de sección |
-| --- | --- | --- | --- | --- |
+| Pantalla         | Margen mínimo | Columnas | Gutter | Padding vertical de sección |
+|              --- | --- | --- | --- | --- |
 | Desktop ≥1200 px | 48 px, centrado al alcanzar el máximo | 12 | 24 px | 96 px |
-| Tablet 768–1199 px | 32 px | 8 | 24 px | 72 px |
+|Tablet 768–1199 px| 32 px | 8 | 24 px | 72 px |
 | Móvil 360–767 px | 20 px | 4 | 16 px | 56 px |
 | Móvil 320–359 px | 16 px | 4 | 16 px | 48 px |
 

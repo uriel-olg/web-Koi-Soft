@@ -4,7 +4,12 @@ import { useLocation } from "react-router";
 export default function ScrollToLocation() {
   const { pathname, hash, key } = useLocation();
   useEffect(() => {
-    const aliases: Record<string, string> = { hero: "inicio" };
+    const aliases: Record<string, string> = {
+      hero: "inicio",
+      soluciones: "servicios",
+      digital: "servicios",
+      it: "servicios",
+    };
     let id = "";
     try {
       id = decodeURIComponent(hash.slice(1)).toLowerCase();
@@ -12,7 +17,10 @@ export default function ScrollToLocation() {
       /* Una URL mal formada no debe romper la navegación. */
     }
     const frame = requestAnimationFrame(() => {
-      const target = id ? document.getElementById(aliases[id] || id) : null;
+      const target = id
+        ? document.getElementById(id) ||
+          document.getElementById(aliases[id] || id)
+        : null;
       if (target) {
         target.scrollIntoView({ behavior: "instant", block: "start" });
         target.setAttribute("tabindex", "-1");

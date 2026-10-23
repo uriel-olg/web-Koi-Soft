@@ -17,7 +17,7 @@ export function Navbar() {
         toggle.current?.focus();
       }
     };
-    const media = matchMedia("(min-width: 900px)");
+    const media = matchMedia("(min-width: 1100px)");
     const resize = () => {
       if (media.matches) setMenuOpen(false);
     };
@@ -48,15 +48,12 @@ export function Navbar() {
           id="main-navigation"
         >
           {navigation.map((link) => {
-            const active =
-              location.pathname === "/"
-                ? (location.hash || "#inicio").toLowerCase() === `#${link.id}`
-                : location.pathname === link.path;
+            const active = location.pathname === link.path;
             return (
               <Link
                 key={link.id}
-                to={`/#${link.id}`}
-                aria-current={active ? "location" : undefined}
+                to={link.path}
+                aria-current={active ? "page" : undefined}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}

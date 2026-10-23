@@ -64,7 +64,7 @@ export default function About({
             ))}
           </div>
         </div>
-        <div className="process">
+        <div className="process" id="proceso">
           <div className="process-heading">
             <h2>
               Primero, entender.

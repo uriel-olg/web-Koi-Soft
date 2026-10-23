@@ -32,7 +32,7 @@ La portada reúne servicios, propuestas ilustrativas, nosotros, proceso y contac
 
 ## Brand Commitments
 
-Conservar el nombre KoiBite y el logo koi existente (`public/KoiBite-log.svg`). La voz es cercana, clara y en español con voseo: tecnología práctica y acompañamiento humano. La dirección visual aprobada es espaciosa, mínima y accesible, con blanco, azul marino y naranja cálido contenido; sus reglas viven en `DESIGN.md`.
+Conservar el nombre KoiBite y el logo koi existente (`public/KoiBite-log.svg`). La voz es cercana, clara y en español con voseo: tecnología práctica y acompañamiento humano. La dirección visual implementada es editorial, cálida, espaciosa y mínima: marfil, tinta, terracota y salvia, con títulos Newsreader y cuerpo Manrope autoalojados. Sus reglas y estados accesibles viven en `DESIGN.md`.
 
 ## Evidence on Hand
 

@@ -1,51 +1,152 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-23T01:39:07.298193+00:00",
+  "generatedAt": "2026-10-23T02:29:33.078Z",
   "title": "Design System: KoiBite",
   "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Marfil",
+        "tonalRamp": [
+          "oklch(15% 0.009 85)",
+          "oklch(26% 0.009 85)",
+          "oklch(38% 0.009 85)",
+          "oklch(50% 0.009 85)",
+          "oklch(62% 0.009 85)",
+          "oklch(74% 0.009 85)",
+          "oklch(86% 0.009 85)",
+          "oklch(95% 0.009 85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "tonalRamp": [
+          "oklch(15% 0.027 244)",
+          "oklch(26% 0.027 244)",
+          "oklch(38% 0.027 244)",
+          "oklch(50% 0.027 244)",
+          "oklch(62% 0.027 244)",
+          "oklch(74% 0.027 244)",
+          "oklch(86% 0.027 244)",
+          "oklch(95% 0.027 244)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Terracota de acción",
+        "tonalRamp": [
+          "oklch(15% 0.14 38)",
+          "oklch(26% 0.14 38)",
+          "oklch(38% 0.14 38)",
+          "oklch(50% 0.14 38)",
+          "oklch(62% 0.14 38)",
+          "oklch(74% 0.14 38)",
+          "oklch(86% 0.14 38)",
+          "oklch(95% 0.14 38)"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Salvia",
+        "tonalRamp": [
+          "oklch(15% 0.015 133)",
+          "oklch(26% 0.015 133)",
+          "oklch(38% 0.015 133)",
+          "oklch(50% 0.015 133)",
+          "oklch(62% 0.015 133)",
+          "oklch(74% 0.015 133)",
+          "oklch(86% 0.015 133)",
+          "oklch(95% 0.015 133)"
+        ]
+      },
+      "accent-text": {
+        "role": "primary",
+        "displayName": "Terracota de lectura",
+        "tonalRamp": [
+          "oklch(15% 0.14 38)",
+          "oklch(26% 0.14 38)",
+          "oklch(38% 0.14 38)",
+          "oklch(50% 0.14 38)",
+          "oklch(62% 0.14 38)",
+          "oklch(74% 0.14 38)",
+          "oklch(86% 0.14 38)",
+          "oklch(95% 0.14 38)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Titular editorial",
+        "purpose": "Hero con énfasis cursivo puntual."
+      },
+      "headline": {
+        "displayName": "Título de sección",
+        "purpose": "Jerarquía editorial en Newsreader regular."
+      },
+      "body": {
+        "displayName": "Lectura y controles",
+        "purpose": "Manrope para contenido práctico, navegación y formularios."
+      }
+    },
     "shadows": [
       {
-        "name": "hero-note",
-        "value": "0 14px 40px #152d4212",
-        "purpose": "Profundidad puntual de las notas del hero."
+        "name": "showcase",
+        "value": "0 16px 40px rgb(24 37 48 / 8%)",
+        "purpose": "Visual conceptual principal."
+      },
+      {
+        "name": "project-browser",
+        "value": "0 12px 28px rgb(24 37 48 / 10%)",
+        "purpose": "Navegador dentro de miniaturas ilustrativas."
       },
       {
         "name": "mobile-navigation",
-        "value": "0 20px 35px #162b3e12",
-        "purpose": "Separación del menú móvil abierto."
+        "value": "0 20px 35px rgb(24 37 48 / 8%)",
+        "purpose": "Menú móvil superpuesto."
       }
     ],
     "motion": [
       {
-        "name": "hero-entry",
-        "value": "650ms cubic-bezier(.16,1,.3,1)",
-        "purpose": "Entrada visible con desplazamiento de 12px; respeta movimiento reducido."
+        "name": "interaction",
+        "value": "160ms",
+        "purpose": "Estados de botones, filtros, enlaces e indicador de FAQ."
       },
       {
-        "name": "interaction",
-        "value": "200ms",
-        "purpose": "Transiciones de botones y enlaces."
+        "name": "showcase-hover",
+        "value": "220ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Ascenso de 4px del visual principal."
+      },
+      {
+        "name": "hero-entry",
+        "value": "600ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entrada del texto del hero con desplazamiento de 8px."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Quita animaciones, transiciones y desplazamiento suave; MotionConfig respeta la preferencia del usuario."
       }
     ],
     "breakpoints": [
       {
-        "name": "wide",
-        "value": "1500px"
-      },
-      {
         "name": "desktop-compact",
-        "value": "1150px"
+        "value": "1199px"
       },
       {
-        "name": "tablet",
-        "value": "899px"
+        "name": "collapsed-navigation",
+        "value": "1099px"
       },
       {
         "name": "mobile",
-        "value": "639px"
+        "value": "767px"
       },
       {
         "name": "small-mobile",
+        "value": "479px"
+      },
+      {
+        "name": "narrow-mobile",
         "value": "359px"
       }
     ]
@@ -55,63 +156,105 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Acción principal, cálida y clara.",
-      "html": "<button class=\"ds-primary\">Contanos tu idea</button>",
-      "css": ".ds-primary{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;background:var(--color-accent,#bd4c10);color:#fff;padding:14px 23px;border:1px solid transparent;border-radius:10px;font-size:13px;font-weight:700;min-height:52px;cursor:pointer;transition:background .2s,transform .2s}.ds-primary:hover{background:#9d3d0a;transform:translateY(-2px)}.ds-primary:focus-visible{outline:3px solid #3269a0;outline-offset:5px;}"
+      "description": "Acción principal terracota con estados de puntero, teclado y pulsación.",
+      "html": "<button class=\"ds-primary\">Contanos qué necesitás</button>",
+      "css": ".ds-primary{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:14px 22px;border:1px solid transparent;border-radius:8px;font-size:14px;font-weight:600;line-height:1.5;cursor:pointer;transition:background 160ms,border-color 160ms;background:var(--color-accent,#b84e2d);color:#fff}.ds-primary:hover{background:var(--color-accent-hover,#9e3e23)}.ds-primary:active{background:var(--color-accent-active,#84321c)}.ds-primary:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}.ds-primary:disabled{background:var(--color-muted,#52616b);cursor:wait}"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Acción secundaria con borde suave.",
-      "html": "<button class=\"ds-secondary\">Explorar servicios</button>",
-      "css": ".ds-secondary{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;background:#fff;color:var(--color-ink,#162b3e);padding:14px 23px;border:1px solid #dce4e9;border-radius:10px;font-size:13px;font-weight:700;min-height:52px;cursor:pointer;transition:background .2s}.ds-secondary:hover{background:#edf2f6}.ds-secondary:focus-visible{outline:3px solid #3269a0;outline-offset:5px;}"
+      "description": "Acción secundaria con fondo transparente y borde de control.",
+      "html": "<button class=\"ds-secondary\">Ver servicios</button>",
+      "css": ".ds-secondary{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:52px;padding:14px 22px;border:1px solid transparent;border-radius:8px;font-size:14px;font-weight:600;line-height:1.5;cursor:pointer;transition:background 160ms,border-color 160ms;background:transparent;color:var(--color-ink,#182530);border-color:var(--color-control,#7b867d)}.ds-secondary:hover{background:var(--color-paper,#eeeee7)}.ds-secondary:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}"
     },
     {
-      "name": "Contact Input",
+      "name": "Contact Field",
       "kind": "input",
       "refersTo": "input",
-      "description": "Campo con etiqueta visible y foco claro.",
-      "html": "<label class=\"ds-label\" for=\"ds-name\">Tu nombre</label><input class=\"ds-input\" id=\"ds-name\" placeholder=\"¿Cómo te llamás?\">",
-      "css": ".ds-label{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;display:block;font-size:11px;font-weight:700;margin-bottom:7px;color:#162b3e}.ds-input{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;width:100%;box-sizing:border-box;border:1px solid #c9d4dd;border-radius:7px;background:#fff;color:#162b3e;padding:11px 12px;font-size:12px;min-height:44px;caret-color:#bd4c10}.ds-input::placeholder{color:#667787}.ds-input:hover{border-color:#899ba9}.ds-input:focus-visible{outline:3px solid #3269a0;outline-offset:5px;}"
+      "description": "Etiqueta persistente y campo legible sobre el formulario marfil.",
+      "html": "<label class=\"ds-field\">Tu email *<input type=\"email\" placeholder=\"vos@ejemplo.com\" autocomplete=\"email\"></label>",
+      "css": ".ds-field{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:block;color:var(--color-ink,#182530);font-size:13px;font-weight:600}.ds-field input{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:block;width:100%;min-height:48px;margin-top:8px;border:1px solid var(--color-control,#7b867d);border-radius:6px;padding:12px 14px;background:var(--color-surface,#fff);color:var(--color-ink,#182530);font-size:16px;line-height:1.5}.ds-field input::placeholder{color:var(--color-muted,#52616b);opacity:1}.ds-field input:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}.ds-field input[aria-invalid=true]{border-color:var(--color-danger,#a9312c)}"
     },
     {
       "name": "Navigation",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "Navegación de texto con estado activo naranja.",
-      "html": "<nav class=\"ds-nav\"><a href=\"#inicio\">Inicio</a><a href=\"#servicios\" aria-current=\"location\">Servicios</a><a href=\"#contacto\">Contacto</a></nav>",
-      "css": ".ds-nav{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;display:flex;gap:27px}.ds-nav a{color:#162b3e;font-size:13px;font-weight:600;padding:12px 0;text-decoration:none;border-bottom:2px solid transparent}.ds-nav a:hover,.ds-nav a[aria-current]{color:#bd4c10}.ds-nav a[aria-current]{border-color:#d85b1b}.ds-nav a:focus-visible{outline:3px solid #3269a0;outline-offset:5px;}"
+      "description": "Enlaces tranquilos; la ruta actual se identifica con terracota y línea.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegación de ejemplo\"><a href=\"#inicio\" aria-current=\"page\">Inicio</a><a href=\"#servicios\">Servicios</a><a href=\"#contacto\">Contacto</a></nav>",
+      "css": ".ds-nav{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:flex;flex-wrap:wrap;gap:30px;background:var(--color-canvas,#f6f3ed)}.ds-nav a{position:relative;padding:13px 0;color:var(--color-muted,#52616b);font-size:13px;font-weight:600;text-decoration:none}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--color-accent,#b84e2d)}.ds-nav a[aria-current]:after{content:'';position:absolute;left:0;right:0;bottom:5px;height:1px;background:currentColor}.ds-nav a:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}"
     },
     {
       "name": "Project Filter",
       "kind": "chip",
       "refersTo": "filter-chip",
-      "description": "Filtro con estado seleccionado azul marino.",
-      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Software <span>6</span></button>",
-      "css": ".ds-chip{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;display:inline-flex;gap:12px;align-items:center;min-height:43px;padding:8px 18px;border:1px solid #cad5dd;border-radius:24px;background:transparent;color:#162b3e;font-size:12px;font-weight:600;cursor:pointer;transition:background .2s}.ds-chip span{font-size:10px;opacity:.75}.ds-chip:hover{background:#e5ecf2}.ds-chip[aria-pressed=true]{background:#17334f;color:#fff;border-color:#17334f}.ds-chip:focus-visible{outline:3px solid #3269a0;outline-offset:5px;}"
+      "description": "Filtro de propuestas con contador y estado aria-pressed.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filtros de ejemplo\"><button aria-pressed=\"true\">Todos <span>12</span></button><button aria-pressed=\"false\">Software <span>6</span></button></div>",
+      "css": ".ds-filters{display:flex;flex-wrap:wrap;gap:8px}.ds-filters button{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:flex;align-items:center;gap:12px;min-height:44px;padding:9px 18px;border-radius:24px;border:1px solid var(--color-control,#7b867d);background:transparent;color:var(--color-ink,#182530);font-size:13px;font-weight:600;cursor:pointer;transition:background 160ms,color 160ms}.ds-filters span{font-size:12px;font-variant-numeric:tabular-nums}.ds-filters button:hover{background:var(--color-sage,#e3e9e0)}.ds-filters button[aria-pressed=true]{background:var(--color-ink,#182530);border-color:var(--color-ink,#182530);color:#fff}.ds-filters button:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}"
     },
     {
-      "name": "Service Card",
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Servicio presentado en una fila con separador y enlace explícito.",
+      "html": "<a class=\"ds-service\" href=\"#digital\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"m16 18 6-6-6-6M8 6l-6 6 6 6\"/></svg><div><h3>Soluciones digitales</h3><p>Sitios web, sistemas y automatizaciones.</p></div><svg class=\"ds-service-arrow\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-service{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);display:grid;grid-template-columns:24px 1fr 24px;gap:22px;align-items:start;border-top:1px solid var(--color-line,#d3d4cb);padding:30px 0;text-decoration:none;color:var(--color-ink,#182530)}.ds-service>svg{margin-top:5px;color:var(--color-accent,#b84e2d)}.ds-service h3{margin:0;font:400 31px/1.15 var(--font-display,Newsreader,Georgia,serif);letter-spacing:-.02em}.ds-service p{margin:12px 0 0;color:var(--color-muted,#52616b);font-size:14px;line-height:1.85}.ds-service .ds-service-arrow{color:var(--color-ink,#182530);transition:transform 160ms}.ds-service:hover .ds-service-arrow{transform:translate(3px,-3px);color:var(--color-accent,#b84e2d)}.ds-service:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}"
+    },
+    {
+      "name": "Project Preview",
       "kind": "card",
-      "refersTo": "service-card",
-      "description": "Superficie suave para describir un servicio.",
-      "html": "<article class=\"ds-card\"><h3>Sistemas a medida</h3><p>Herramientas que se adaptan a tu forma de trabajar.</p><a href=\"#contacto\">Hablemos</a></article>",
-      "css": ".ds-card{font-family:Manrope,ui-sans-serif,system-ui,sans-serif;background:var(--color-paper,#f5f8fa);color:#162b3e;border-radius:14px;padding:28px 23px 21px;max-width:300px}.ds-card h3{font-size:20px;letter-spacing:-.025em;line-height:1.16;margin:0 0 17px}.ds-card p{font-size:13px;line-height:1.85;color:#536778;margin:0 0 20px}.ds-card a{font-size:13px;font-weight:700;color:#bd4c10;text-decoration:none;text-underline-offset:5px}.ds-card a:hover{text-decoration:underline}.ds-card a:focus-visible{outline:3px solid #3269a0;outline-offset:5px;}"
+      "description": "Visual conceptual redondeado, seguido de texto sin caja exterior.",
+      "html": "<article class=\"ds-project\"><div class=\"ds-project-visual\" aria-hidden=\"true\"><span>Aa.</span></div><div class=\"ds-project-category\">Software · Concepto ilustrativo</div><h3>Una web para tu negocio</h3><p>Una posibilidad para explorar lo que podemos crear.</p><a href=\"#contacto\">Quiero algo así ↗</a></article>",
+      "css": ".ds-project{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);color:var(--color-ink,#182530)}.ds-project-visual{display:grid;place-items:center;min-height:200px;border-radius:12px;background:var(--color-sage,#e3e9e0)}.ds-project-visual span{font:400 80px/1 var(--font-display,Newsreader,Georgia,serif);color:var(--color-moss,#4e6558)}.ds-project-category{margin-top:24px;color:var(--color-accent-text,#9e3e23);font-size:12px;font-weight:600}.ds-project h3{margin:10px 0 0;font:400 32px/1.15 var(--font-display,Newsreader,Georgia,serif);letter-spacing:-.02em}.ds-project p{margin:12px 0 0;color:var(--color-muted,#52616b);font-size:14px;line-height:1.85}.ds-project a{display:inline-flex;align-items:center;min-height:44px;margin-top:8px;color:var(--color-accent-text,#9e3e23);font-size:14px;font-weight:600;text-decoration:none}.ds-project a:hover{text-decoration:underline}.ds-project a:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}"
+    },
+    {
+      "name": "FAQ",
+      "kind": "custom",
+      "description": "Acordeón nativo con separadores y respuesta de lectura amplia.",
+      "html": "<details class=\"ds-faq\"><summary>¿Por dónde empezamos?<span aria-hidden=\"true\">+</span></summary><p>Contanos qué necesitás. Primero entendemos el contexto y después buscamos una solución.</p></details>",
+      "css": ".ds-faq{font-family:var(--font-sans,Manrope,ui-sans-serif,system-ui,sans-serif);border-top:1px solid var(--color-line,#d3d4cb);border-bottom:1px solid var(--color-line,#d3d4cb);color:var(--color-ink,#182530)}.ds-faq summary{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:44px;padding:23px 0;font-size:15px;font-weight:600;cursor:pointer;list-style:none}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary span{color:var(--color-accent,#b84e2d);transition:transform 160ms}.ds-faq[open] summary span{transform:rotate(45deg)}.ds-faq summary:focus-visible{outline:3px solid var(--color-focus,#28594f);outline-offset:5px;}.ds-faq p{margin:0;padding-bottom:24px;color:var(--color-muted,#52616b);font-size:14px;line-height:1.9;max-width:65ch}"
     }
   ],
   "narrative": {
-    "northStar": "Tecnología de tu lado",
-    "overview": "Una identidad clara y cercana que presenta capacidad técnica sin dificultar la lectura. El blanco y las superficies suaves dejan respirar el contenido; el azul marino aporta estructura y el naranja cálido guía acciones y detalles de marca.\n\nEl logo koi existente mantiene la continuidad de KoiBite. Manrope, las esquinas suavizadas y los iconos de línea dan un carácter práctico y amable. Las imágenes y las miniaturas explican posibilidades: su condición ilustrativa debe permanecer explícita.",
+    "northStar": "Tecnología con criterio humano",
+    "overview": "Una identidad editorial cálida que acerca diseño web y soporte IT. El marfil deja respirar la información; la tinta estructura la lectura, el terracota identifica las acciones y la salvia acompaña la forma de trabajar.\n\nNewsreader aporta carácter a los títulos y Manrope mantiene claros los párrafos, la navegación y los formularios. El logo koi conserva la continuidad de marca. La composición se apoya en espacio, líneas finas y visuales acotados; los conceptos ilustrativos permanecen identificados.",
     "keyCharacteristics": [
-      "Espacio generoso y jerarquía directa.",
-      "Azul marino estructural y naranja cálido contenido.",
-      "Tipografía única, legible y cercana.",
-      "Superficies suaves con profundidad puntual.",
-      "Ilustraciones honestas y contacto visible."
+      "Marfil, tinta, terracota y salvia con funciones claras.",
+      "Títulos editoriales y controles de lectura directa.",
+      "Filas de servicios y propuestas sin cajas repetidas.",
+      "Profundidad puntual y movimiento breve.",
+      "Contacto visible e ilustraciones honestas."
     ],
-    "rules": [],
-    "dos": [],
-    "donts": []
+    "rules": [
+      {
+        "name": "The Action Accent Rule",
+        "body": "Usar el terracota de acción en botones y titulares; los enlaces de texto, las categorías y el pie editorial pequeño usan el terracota de lectura más oscuro. Mantener ambos opacos y conservar sus roles.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Usar Newsreader para títulos editoriales y Manrope para lectura, navegación y controles.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Surface Rule",
+        "body": "Mantener planas las superficies de contenido; las sombras separan visuales y navegación superpuestos.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** conservar el logo koi y la voz cercana en español con voseo.",
+      "**Do** usar marfil como base, tinta para lectura y terracota para acciones.",
+      "**Do** mantener las familias y los estados definidos por el código compartido.",
+      "**Do** conservar foco visible, etiquetas persistentes y mensajes de error asociados.",
+      "**Do** identificar las propuestas y las imágenes generadas como ilustrativas."
+    ],
+    "donts": [
+      "**Don't** presentar conceptos como clientes, trabajos realizados o resultados medidos.",
+      "**Don't** convertir los servicios y las propuestas en una colección de paneles con sombra.",
+      "**Don't** usar la serif para campos, navegación o explicaciones técnicas.",
+      "**Don't** reemplazar datos reales de contacto ni inventar enlaces sociales.",
+      "**Don't** anunciar entrega de correo sin evidencia ni borrar datos después de un fallo."
+    ]
   }
 }
