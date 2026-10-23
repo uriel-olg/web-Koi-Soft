@@ -74,18 +74,20 @@ if (!filter_var($datos['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 $servicios = [
-    'Desarrollo web',
-    'Landing page',
-    'Catálogo digital',
-    'E-commerce',
-    'Automatizaciones',
-    'Otro / Necesito asesoramiento',
+    'web' => 'Desarrollo web',
+    'catalogo' => 'Catálogos y contenido',
+    'automatizacion' => 'Integraciones y automatización',
+    'mantenimiento-web' => 'Optimización y mantenimiento web',
+    'pc' => 'Armado y actualización de PC',
+    'software' => 'Software y configuración',
+    'soporte' => 'Diagnóstico y mantenimiento IT',
+    'asesoramiento' => 'Necesito asesoramiento',
 ];
 
 $presupuestos = ['', 'menos-500', '500-1500', 'mas-1500'];
 
 if (
-    !in_array($datos['servicio'], $servicios, true) ||
+    !array_key_exists($datos['servicio'], $servicios) ||
     !in_array($datos['presupuesto'], $presupuestos, true)
 ) {
     responder(400, ['error' => 'Revisá el servicio y el presupuesto']);
@@ -119,7 +121,7 @@ try {
         'Nombre: ' . $datos['nombre'],
         'Email: ' . $datos['email'],
         'Empresa: ' . ($datos['empresa'] ?: 'No especificada'),
-        'Servicio: ' . $datos['servicio'],
+        'Servicio: ' . $servicios[$datos['servicio']],
         'Presupuesto: ' . ($datos['presupuesto'] ?: 'No definido'),
         '',
         'Mensaje:',

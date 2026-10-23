@@ -1,5 +1,19 @@
 # KoiBite · Servicios digitales
 
+## Nueva versión visual
+
+La interfaz usa una dirección azul noche y naranja, navegación responsive y cinco páginas: Inicio, Servicios, Proyectos, Nosotros y Contacto. Los ejemplos de Proyectos se identifican como conceptos o casos de uso, sin atribuir clientes ni resultados.
+
+- `pnpm dev`: vista local de la web.
+- `pnpm dev:api`: backend de contacto en otra terminal, con las variables privadas ya configuradas.
+- `pnpm build`: revisión TypeScript y compilación para publicación.
+
+La vista de Vite no envía correos por sí sola. El formulario muestra un error y conserva los datos si el backend no está disponible. En desarrollo, `/api` se dirige al backend local del puerto 3001 por defecto. `VITE_API_URL` permite usar otra base pública; `VITE_CONTACT_ENDPOINT` permite configurar una ruta completa, por ejemplo `/api/contacto.php` en un hosting PHP. `VITE_WHATSAPP_NUMBER` permite configurar el celular con su prefijo internacional.
+
+El contrato de servicios vive en `src/data/contact.ts` y la validación compartida en `src/schemas/contact.ts`. El backend PHP conserva el mismo mapa de identificadores. Actualizar ambos al agregar servicios. En un despliegue PHP, publicar también `api/contacto.php`: no forma parte del build estático de Vite.
+
+Fuentes: Manrope e Inter desde Google Fonts, con fuentes de sistema como alternativa. Los visuales de ejemplo se dibujan con HTML/CSS; no requieren imágenes externas. La guía de diseño está en `docs/revision-ui-ux/propuesta-diseno-v2.md`.
+
 Sitio web de servicios digitales orientado a presentar soluciones de desarrollo web, catálogos, e-commerce y automatizaciones, mostrar proyectos y facilitar el contacto con potenciales clientes.
 
 Desarrollado con **React, TypeScript y Tailwind CSS**, con un formulario validado mediante **React Hook Form y Zod** y un backend de **Node.js + Express** para enviar consultas por correo con **Resend**.

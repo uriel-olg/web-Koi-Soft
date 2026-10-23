@@ -1,9 +1,9 @@
-
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { Resend } from "resend";
-import { z } from "zod";
+import { contactoSchema, serviceLabels } from "../src/schemas/contact.js";
+import type { DatosContacto } from "../src/schemas/contact.js";
 
 const app = express();
 
@@ -18,27 +18,8 @@ const resend = new Resend(RESEND_API_KEY);
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
 
-
 app.use(cors({ origin: FRONTEND_URL }));
 app.use(express.json({ limit: "20kb" }));
-
-const contactoSchema = z.object({
-  nombre: z.string().trim().min(2).max(100),
-  email: z.string().trim().email().max(254),
-  empresa: z.string().trim().max(150),
-  servicio: z.enum([
-    "Desarrollo web",
-    "Landing page",
-    "Catálogo digital",
-    "E-commerce",
-    "Automatizaciones",
-    "Otro / Necesito asesoramiento",
-  ]),
-  presupuesto: z.enum(["", "menos-500", "500-1500", "mas-1500"]),
-  mensaje: z.string().trim().min(10).max(5000),
-});
-
-type DatosContacto = z.infer<typeof contactoSchema>;
 
 // Función de envío independiente de Express y del hosting.
 async function enviarConsulta(datos: DatosContacto) {
@@ -51,7 +32,7 @@ async function enviarConsulta(datos: DatosContacto) {
       `Nombre: ${datos.nombre}`,
       `Email: ${datos.email}`,
       `Empresa: ${datos.empresa || "No especificada"}`,
-      `Servicio: ${datos.servicio}`,
+      `Servicio: ${serviceLabels[datos.servicio]}`,
       `Presupuesto: ${datos.presupuesto || "No definido"}`,
       "",
       "Mensaje:",
@@ -86,5 +67,3 @@ const puerto = Number(process.env.PORT || 3001);
 app.listen(puerto, () => {
   console.log(`Backend escuchando en el puerto ${puerto}`);
 });
-
-
