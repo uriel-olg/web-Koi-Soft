@@ -22,17 +22,19 @@ export default function Hero() {
           </p>
           <div className="hero-actions">
             <Link className="button" to="/contacto">
-              Contanos qué necesitás <ArrowUpRight size={18} aria-hidden="true" />
+              Contanos qué necesitás{" "}
+              <ArrowUpRight size={18} aria-hidden="true" />
             </Link>
             <Link className="text-link hero-secondary" to="/proyectos">
               Ver propuestas <ArrowRight size={17} aria-hidden="true" />
             </Link>
           </div>
         </m.div>
+
         <div className="hero-showcase">
           <div className="showcase-workspace" aria-hidden="true">
             <img
-              src="/images/koi-workspace.webp"
+              src="/images/dashboard.webp"
               alt=""
               width="1200"
               height="800"
@@ -43,13 +45,21 @@ export default function Hero() {
               <strong>Listo para lo que viene.</strong>
             </div>
           </div>
+
           <Link
             to="/proyectos"
             className="showcase-main"
             aria-label="Explorar propuestas de desarrollo web. Vista de una interfaz conceptual."
           >
             <div className="showcase-browser" aria-hidden="true">
-              <div className="showcase-toolbar">
+              <img
+                src="/images/hero.webp"
+                alt=""
+                width="1200"
+                height="800"
+                decoding="async"
+              />
+              {/* <div className="showcase-toolbar">
                 <span className="browser-dots">
                   <i />
                   <i />
@@ -95,16 +105,22 @@ export default function Hero() {
                   <span>Contenido útil</span>
                   <span>Contacto simple</span>
                 </div>
-              </div>
+              </div> */}
             </div>
             <span className="showcase-caption">
               Concepto de interfaz <ArrowUpRight size={14} aria-hidden="true" />
             </span>
           </Link>
-          <div className="showcase-manifesto" aria-hidden="true">
+          
+          <div className="showcase-manifesto bg-[url('/images/manifiesto.webp')] bg-cover bg-center bg-no-repeat ">
+              
+            
+            
             <ArrowUpRight size={27} strokeWidth={1.3} />
             <p>
-              Menos vueltas.<br /><em>Más claridad.</em>
+              Menos vueltas.
+              <br />
+              <em>Más claridad.</em>
             </p>
             <span>La forma Koi.</span>
           </div>

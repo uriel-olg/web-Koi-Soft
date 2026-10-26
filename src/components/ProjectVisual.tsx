@@ -16,223 +16,75 @@ import type { Project } from "../data/site";
 export default function ProjectVisual({ project }: { project: Project }) {
   const { visual, category } = project;
   return (
-    <div className={`project-visual visual-${category}`} aria-hidden="true">
+    <div className="" aria-hidden="true">
       <span className="visual-label">Concepto ilustrativo</span>
       {category === "software" ? (
         <div className="mini-browser">
-          <div className="mini-toolbar">
-            <i />
-            <i />
-            <i />
-            <span>koi / {project.id}</span>
-          </div>
-          <div className={`mini-screen screen-${visual}`}>
+          
+          <div className={``}>
             {visual === "website" && (
               <>
-                <span className="mini-nav">
-                  ESTUDIO <span>Servicios · Contacto</span>
-                </span>
-                <div className="mini-website">
-                  <div>
-                    <strong>
-                      Tu idea.
-                      <br />
-                      Su próximo lugar.
-                    </strong>
-                    <span className="mini-button">
-                      Conocenos <ChevronRight size={9} />
-                    </span>
-                  </div>
-                  <div className="mini-brand-art">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
+                <img src="/images/proyecto-instituto-ingles.webp" alt="" className="rounded-lg"/>
+                
               </>
             )}
             {visual === "shop" && (
               <>
-                <span className="mini-nav">
-                  CASA <span>Colección · Tienda</span>
-                </span>
-                <strong className="mini-title">Objetos para tu día.</strong>
-                <div className="mini-products">
-                  {["Luz", "Forma", "Calma"].map((name, i) => (
-                    <div key={name}>
-                      <div className={`object object-${i}`} />
-                      <span>{name}</span>
-                    </div>
-                  ))}
-                </div>
+                 <img src="/images/proyecto-shop-catalogo.webp" alt="" className="rounded-lg"/>
               </>
             )}
             {visual === "management" && (
               <>
-                <span className="mini-nav">
-                  Tu negocio <span>Vista general</span>
-                </span>
-                <div className="mini-data-header">
-                  <span>Producto</span>
-                  <span>Stock</span>
-                  <span>Estado</span>
-                </div>
-                {[
-                  "Cuaderno natural",
-                  "Agenda semanal",
-                  "Set de escritorio",
-                ].map((name, i) => (
-                  <div className="mini-data-row" key={name}>
-                    <span>{name}</span>
-                    <span>{[24, 18, 36][i]}</span>
-                    <span>Disponible</span>
-                  </div>
-                ))}
+                 <img src="/images/proyecto-management.webp" alt="" className="rounded-lg"/>
               </>
             )}
             {visual === "calendar" && (
               <>
-                <span className="mini-nav">
-                  Tu agenda <span>Semana de ejemplo</span>
-                </span>
-                <div className="mini-calendar">
-                  {["LUN", "MAR", "MIÉ", "JUE", "VIE"].map((day, i) => (
-                    <div key={day}>
-                      <span>{day}</span>
-                      <strong>{12 + i}</strong>
-                      <i />
-                      <i />
-                    </div>
-                  ))}
-                </div>
+                 <img src="/images/proyecto-agenda.webp" alt="" className="rounded-lg"/>
               </>
             )}
             {visual === "workflow" && (
               <>
-                <span className="mini-nav">Una tarea, menos pasos.</span>
-                <div className="mini-flow">
-                  <div>
-                    <Monitor size={21} />
-                    <span>Formulario</span>
-                  </div>
-                  <ChevronRight size={16} />
-                  <div>
-                    <Database size={21} />
-                    <span>Tu sistema</span>
-                  </div>
-                  <ChevronRight size={16} />
-                  <div>
-                    <Mail size={21} />
-                    <span>Confirmación</span>
-                  </div>
-                </div>
-                <span className="mini-flow-caption">
-                  <Check size={11} /> Las herramientas, conectadas.
-                </span>
+                <img src="/images/proyecto-workflow.webp" alt="" />
               </>
             )}
             {visual === "analytics" && (
               <>
-                <span className="mini-nav">
-                  Tu negocio <span>Datos de ejemplo</span>
-                </span>
-                <strong className="mini-title">Una mirada más clara.</strong>
-                <div className="mini-chart">
-                  {[28, 43, 36, 60, 51, 72, 83, 92].map((height, i) => (
-                    <i key={i} style={{ height: `${height}%` }} />
-                  ))}
-                </div>
+                <img src="/images/proyecto-analytics.webp" alt="" />
               </>
             )}
           </div>
         </div>
       ) : (
-        <div className="hardware-scene">
+        <div className="mini-browser ">
           {visual === "build" && (
             <>
-              <div className="pc-tower">
-                <span />
-                <div className="pc-fan" />
-                <div className="pc-fan" />
-                <i />
-              </div>
-              <div className="hardware-detail">
-                <Cpu size={22} />
-                <strong>Elegida para vos.</strong>
-                <span>Componentes en equilibrio.</span>
-              </div>
+               <img src="/images/soporte-build-concepto.webp" alt="" className="rounded-lg"/>
             </>
           )}
           {visual === "maintenance" && (
             <>
-              <div className="hardware-symbol">
-                <Wrench size={44} strokeWidth={1.3} />
-              </div>
-              <div className="hardware-detail">
-                <strong>Cuidar también es mejorar.</strong>
-                <span>
-                  <Check size={13} /> Limpieza interna
-                </span>
-                <span>
-                  <Check size={13} /> Revisión y diagnóstico
-                </span>
-                <span>
-                  <Check size={13} /> Mantenimiento preventivo
-                </span>
-              </div>
+               <img src="/images/soporte-maintenance.webp" alt="" className="rounded-lg"/>
             </>
           )}
           {visual === "upgrade" && (
             <>
-              <div className="hardware-parts">
-                <MemoryStick size={54} strokeWidth={1.2} />
-                <HardDrive size={44} strokeWidth={1.2} />
-              </div>
-              <div className="hardware-detail">
-                <strong>Más posibilidades.</strong>
-                <span>Memoria + almacenamiento.</span>
-                <span className="hardware-chip">RAM / SSD</span>
-              </div>
+               <img src="/images/soporte-upgrade.webp" alt="" className="rounded-lg"/>
             </>
           )}
           {visual === "software" && (
             <>
-              <div className="software-window">
-                <Monitor size={32} strokeWidth={1.3} />
-                <span>Tu entorno de trabajo</span>
-                <div>
-                  <Check size={12} /> Sistema
-                </div>
-                <div>
-                  <Check size={12} /> Drivers
-                </div>
-                <div>
-                  <Check size={12} /> Programas
-                </div>
-              </div>
+               <img src="/images/soporte-software.webp" alt="" className="rounded-lg"/>
             </>
           )}
           {visual === "backup" && (
             <>
-              <div className="backup-icons">
-                <HardDrive size={40} strokeWidth={1.3} />
-                <span />
-                <ShieldCheck size={44} strokeWidth={1.3} />
-              </div>
-              <div className="hardware-detail">
-                <strong>Lo importante, cuidado.</strong>
-                <span>Copias con un plan.</span>
-              </div>
+               <img src="/images/soporte-backup.webp" alt="" className="rounded-lg"/>
             </>
           )}
           {visual === "network" && (
             <>
-              <Network size={58} strokeWidth={1.2} />
-              <div className="hardware-detail">
-                <strong>Todo, conectado.</strong>
-                <span>Tu espacio de trabajo en red.</span>
-                <span className="hardware-chip">Wi-Fi + red local</span>
-              </div>
+              <img src="/images/soporte-network.webp" alt="" className="rounded-lg"/>
             </>
           )}
         </div>
