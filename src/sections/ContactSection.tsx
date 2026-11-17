@@ -42,6 +42,7 @@ export default function ContactSection({
     state: "idle",
     message: "",
   });
+
   const {
     register,
     handleSubmit,
@@ -53,6 +54,7 @@ export default function ContactSection({
     defaultValues: initialValues,
     mode: "onTouched",
   });
+  
   const selectedService = normalizeContactService(search.get("servicio") || "");
   useEffect(() => {
     if (
@@ -63,9 +65,13 @@ export default function ContactSection({
   }, [selectedService, setValue]);
 
   async function onSubmit(data: ContactData) {
+
     setSubmission({ state: "sending", message: "" });
+    
     const controller = new AbortController();
+
     const timer = setTimeout(() => controller.abort(), 15000);
+
     try {
       const apiBase = (import.meta.env.VITE_API_URL || "").replace(/\/$/, "");
       const endpoint =
@@ -113,6 +119,8 @@ export default function ContactSection({
     "aria-invalid": Boolean(errors[name]),
     "aria-describedby": errors[name] ? `${name}-error` : undefined,
   });
+
+
   return (
     <section
       className="section contact-section"

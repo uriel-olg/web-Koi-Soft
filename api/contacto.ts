@@ -26,7 +26,9 @@ type DatosContacto = ContactData;
 
 // Función de envío independiente de Express y del hosting.
 async function enviarConsulta(datos: DatosContacto) {
+
   const { error } = await resend.emails.send({
+    
     from: RESEND_FROM!,
     to: CONTACT_EMAIL!,
     replyTo: datos.email,

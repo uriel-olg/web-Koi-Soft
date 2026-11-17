@@ -1,16 +1,4 @@
-import {
-  Check,
-  ChevronRight,
-  Cpu,
-  Database,
-  HardDrive,
-  Mail,
-  MemoryStick,
-  Monitor,
-  Network,
-  ShieldCheck,
-  Wrench,
-} from "lucide-react";
+
 import type { Project } from "../data/site";
 
 export default function ProjectVisual({ project }: { project: Project }) {
